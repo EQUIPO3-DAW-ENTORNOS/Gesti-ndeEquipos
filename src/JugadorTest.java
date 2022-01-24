@@ -5,10 +5,15 @@ import org.junit.jupiter.api.Test;
 class JugadorTest {
 
 	@Test
-	void testSetNombreJugador() {
-		fail("Not yet implemented");
+	void testSetNombreJugadornumerodecaracteressuperiora20() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "antonioantonioantonioantonioantonioantonioantonio";
+		jugador.setNombreJugador(nombrejugador);
+		
+		
+		
+		
 	}
-
 	@Test
 	void testSetEdad() {
 		fail("Not yet implemented");
