@@ -10,6 +10,8 @@ class JugadorTest {
 		String nombrejugador = "antonioantonioantonioantonioantonioantonioantonio";
 		jugador.setNombreJugador(nombrejugador);
 		
+		assertEquals(nombrejugador, jugador.getNombreJugador());
+		
 		
 		
 		
@@ -21,7 +23,8 @@ class JugadorTest {
 
 	@Test
 	void testSetIdioma() {
-		fail("Not yet implemented");
+		
+
 	}
 
 }
