@@ -2,14 +2,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-/**
- * 
- */
-
-/**
- * @author LeonadoSacorNefedova
- *
- */
 class AsignarEquipoTest {
 	
 	
@@ -56,6 +48,22 @@ class AsignarEquipoTest {
 	void testNombreJugadorcon20caracteres() {
 		Jugador jugador = new Jugador();
 		String nombrejugador = "antonioantonioantonioantonio";
-		jugador.setNombreJugador(nombre)
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(nombrejugador,jugador.getNombreJugador());
+	}
+	@Test
+	void testNombreJugadorqueyaexista() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "antonio";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(nombrejugador,jugador.getNombreJugador());
+			
+	}
+	@Test
+	void testNombreJugadorquenoexista() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "pepe";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
 	}
 }
