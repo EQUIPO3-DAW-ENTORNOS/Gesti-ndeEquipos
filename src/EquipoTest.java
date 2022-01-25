@@ -4,12 +4,7 @@ import org.junit.jupiter.api.Test;
 
 class EquipoTest {
 
-<<<<<<< Updated upstream
 
-
-
-=======
-<<<<<<< HEAD
 	@Test
 	//esta prueba es cuando tengo un equipo vac
 	public void testSetNombreEquipoVacio() {
@@ -25,7 +20,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombrequipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}
->>>>>>> Stashed changes
+
 	
 	
 	
@@ -60,12 +55,7 @@ class EquipoTest {
 		equipo.setRanking(rankingEquipo);
 		assertEquals(0,equipo.getRanking());
 	}
-=======
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 		@Test
 		void testSetnombreEquiponumerodecaracteressuperiora20() {
 			Equipo equipo = new Equipo();
@@ -118,7 +108,7 @@ class EquipoTest {
 		}
 		
 		
->>>>>>> 46b828fa7952fe4ce03faa39b86b0bd24aae007f
+
 
 		@Test
 		void testSetEdad() {
