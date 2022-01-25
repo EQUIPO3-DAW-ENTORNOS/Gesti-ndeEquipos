@@ -36,20 +36,7 @@ class AsignarEquipoTest {
 		fail("Not yet implemented");
 	}
 
-	/**
-	 * Test method for {@link AsignarEquipo#getEquipo()}.
-	 */
-	@Test
-	void testGetEquipo() {
-		fail("Not yet implemented");
-	}
 
-	/**
-	 * Test method for {@link AsignarEquipo#getJugador()}.
-	 */
-	@Test
-	void testGetJugador() {
-		fail("Not yet implemented");
-	}
-
+	
+	
 }
