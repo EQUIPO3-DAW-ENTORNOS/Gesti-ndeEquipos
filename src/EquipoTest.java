@@ -4,19 +4,14 @@ import org.junit.jupiter.api.Test;
 
 class EquipoTest {
 
-	import static org.junit.jupiter.api.Assertions.*;
-
-	import org.junit.jupiter.api.Test;
-
-	class EquipoTest {
 
 		@Test
 		void testSetnombreEquiponumerodecaracteressuperiora20() {
 			Equipo equipo = new Equipo();
 			String nombreEquipo = "Fcbarrio90123456789012345";
-			equipo.setnombreEquipo(nombreEquipo);
+			equipo.setNombreEquipo(nombreEquipo);
 			
-			assertEquals(null,equipo.getnombreEquipo());
+			assertEquals(null,equipo.getNombreEquipo());
 				
 		}
 		
@@ -24,9 +19,9 @@ class EquipoTest {
 		void testSetnombreEquiponumerodecaracteresmenora20() {
 			Equipo equipo = new Equipo();
 			String nombreEquipo = "Fcbarrio";
-			equipo.setnombreEquipo(nombreEquipo);
+			equipo.setNombreEquipo(nombreEquipo);
 			
-			assertEquals(equipo.getnombreEquipo());
+			assertEquals(nombreEquipo,equipo.getNombreEquipo());
 				
 		}
 		
@@ -34,9 +29,9 @@ class EquipoTest {
 		void testSetnombreEquiponumerodecaracteres20() {
 			Equipo equipo = new Equipo();
 			String nombreEquipo = "Fcbarrio901234567890";
-			equipo.setnombreEquipo(nombreEquipo);
+			equipo.setNombreEquipo(nombreEquipo);
 			
-			assertEquals(equipo.getnombreEquipo());
+			assertEquals(nombreEquipo,equipo.getNombreEquipo());
 				
 		}
 		
@@ -45,9 +40,9 @@ class EquipoTest {
 		void testSetnombreEquiponumerodecaracteresvacio() {
 			Equipo equipo = new Equipo();
 			String nombreEquipo = "";
-			equipo.setnombreEquipo(nombreEquipo);
+			equipo.setNombreEquipo(nombreEquipo);
 			
-			assertEquals(null,equipo.getnombreEquipo());
+			assertEquals(null,equipo.getNombreEquipo());
 				
 		}
 		
@@ -55,9 +50,9 @@ class EquipoTest {
 		void testSetnombreEquipoyaregistrado() {
 			Equipo equipo = new Equipo();
 			String nombreEquipo = "Fcbarrio";
-			equipo.setnombreEquipo(nombreEquipo);
+			equipo.setNombreEquipo(nombreEquipo);
 			
-			assertEquals(null,equipo.getnombreEquipo());
+			assertEquals(null,equipo.getNombreEquipo());
 				
 		}
 		
