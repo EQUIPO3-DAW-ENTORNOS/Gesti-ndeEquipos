@@ -52,32 +52,10 @@ class AsignarEquipoTest {
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}	
-
-	/**
-	 * Test method for {@link AsignarEquipo#AsignarEquipo()}.
-	 */
 	@Test
-	void testAsignarEquipo() {
-		fail("Not yet implemented");
+	void testNombreJugadorcon20caracteres() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "antonioantonioantonioantonio";
+		jugador.setNombreJugador(nombre)
 	}
-
-	/**
-	 * Test method for {@link AsignarEquipo#setEquipo(Equipo)}.
-	 */
-	@Test
-	void testSetEquipo() {
-		fail("Not yet implemented");
-	}
-
-	/**
-	 * Test method for {@link AsignarEquipo#setJugador(Jugador)}.
-	 */
-	@Test
-	void testSetJugador() {
-		fail("Not yet implemented");
-	}
-
-
-	
-	
 }
