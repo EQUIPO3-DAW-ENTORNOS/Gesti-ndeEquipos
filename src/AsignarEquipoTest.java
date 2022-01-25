@@ -66,4 +66,54 @@ class AsignarEquipoTest {
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
+	@Test
+	void testNombreEquipovacio() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
+	}
+	void testNombreEquipocorrecto() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "Los limones";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(nombrejugador,jugador.getNombreJugador());
+	}
+	void testNombreEquipoconmasde20caracteres() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "Los limones Los limones";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
+	}
+	void testNombreEquipoconmenossde20caracteres() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "Los limones";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(nombrejugador,jugador.getNombreJugador());
+	}
+	void testNombreEquipocon20caracteres() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "antonioantonioantonioantonio";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(nombrejugador,jugador.getNombreJugador());
+	}
+	void testNombreEquipoañadidoanteriromente() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "Los limones";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
+	}
+	void testNombreEquiponoañadidoanteriormente() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "Los Aguacates";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
+	}
+	void testNombreEquipoañadidoanteriormente() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "Los Limones";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(nombrejugador,jugador.getNombreJugador());
+	}
+	
 }
