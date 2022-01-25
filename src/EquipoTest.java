@@ -4,9 +4,28 @@ import org.junit.jupiter.api.Test;
 
 class EquipoTest {
 
+<<<<<<< Updated upstream
 
 
 
+=======
+<<<<<<< HEAD
+	@Test
+	//esta prueba es cuando tengo un equipo vac
+	public void testSetNombreEquipoVacio() {
+		Equipo equipo = new Equipo();
+		String nombrequipo="";
+		equipo.setNombreEquipo(nombrequipo);
+		assertEquals(null,equipo.getNombreEquipo());
+	}
+	
+	public void testSetNombreEquipoCompleto() {
+		Equipo equipo = new Equipo();
+		String nombrequipo="";
+		equipo.setNombreEquipo(nombrequipo);
+		assertEquals(null,equipo.getNombreEquipo());
+	}
+>>>>>>> Stashed changes
 	
 	
 	
@@ -41,8 +60,12 @@ class EquipoTest {
 		equipo.setRanking(rankingEquipo);
 		assertEquals(0,equipo.getRanking());
 	}
+=======
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 		@Test
 		void testSetnombreEquiponumerodecaracteressuperiora20() {
 			Equipo equipo = new Equipo();
