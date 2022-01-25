@@ -72,9 +72,44 @@ class JugadorTest {
 	
 
 	@Test
-	void testSetIdioma() {
-		
-
+	void ElegirIdioma() {
+		Jugador jugador = new Jugador();
+		String idioma ="Chino";
+		jugador.setIdioma(idioma);
+	
+		assertEquals(null,jugador.getIdioma());
 	}
-
+	@Test
+	void CampoVacío() {
+		Jugador jugador = new Jugador();
+		String idioma =" ";
+		jugador.setIdioma(idioma);
+		
+		assertEquals(null,jugador.getIdioma());
+	} 
+	@Test
+	void ElegirEspañol() {
+		Jugador jugador = new Jugador();
+		String idioma ="Español";
+		jugador.setIdioma(idioma);
+		
+		assertEquals(idioma,jugador.getIdioma());
+	}
+	@Test
+	void ElegirIngles() {
+		Jugador jugador = new Jugador();
+		String idioma ="Inglés";
+		jugador.setIdioma(idioma);
+		
+		assertEquals(idioma,jugador.getIdioma());
+	}
+	@Test
+	void Elegirdos() {
+		Jugador jugador = new Jugador();
+		String idioma ="Español Inglés ";
+		jugador.setIdioma(idioma);
+		
+		assertEquals(null,jugador.getIdioma());
+	}
+	
 }
