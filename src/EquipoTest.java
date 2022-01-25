@@ -5,9 +5,22 @@ import org.junit.jupiter.api.Test;
 class EquipoTest {
 
 	@Test
-	void testSetNombreEquipo() {
-		fail("Not yet implemented");
+	//esta prueba es cuando tengo un equipo vac
+	void testSetNombreEquipoVacio() {
+		Equipo equipo = new Equipo();
+		String nombrequipo="";
+		equipo.setNombreEquipo(nombrequipo);
+		assertEquals(null,equipo.getNombreEquipo());
 	}
+	void testSetNombreEquipoCompleto() {
+		Equipo equipo = new Equipo();
+		String nombrequipo="";
+		equipo.setNombreEquipo(nombrequipo);
+		assertEquals(null,equipo.getNombreEquipo());
+	}
+	
+	
+	
 
 	@Test
 	void testSetRanking() {
