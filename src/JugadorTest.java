@@ -39,9 +39,37 @@ class JugadorTest {
 	
 	
 	@Test
-	void testSetEdad() {
-		fail("Not yet implemented");
+	//void testSetEdadRecibeLetra() {
+		
+		//Jugador jugador= new Jugador();
+		//String edadJugador="a";
+	
+	
+	
+	void testSetEdadNoMenor() {// edad introducida no mayor de edad
+		Jugador jugador =new Jugador();
+		int edadJugador= 16;
+		jugador.setEdad(16);
+		assertEquals(null,(Integer)jugador.getEdad());
+		
 	}
+	void testSetEdadCampoVacio() {
+	Jugador jugador=new Jugador();
+	String edadJugador=" ";
+	jugador.setEdad(0);
+	assertEquals(null,(Integer)jugador.getEdad());
+	
+		}
+	
+	void testSetEdadCampoVacioMayorEdad(){
+		Jugador jugador=new Jugador();
+		int edadJugador=18;
+		jugador.setEdad(18);
+		assertEquals(null,(Integer)jugador.getEdad());
+		
+		
+	}
+	
 
 	@Test
 	void testSetIdioma() {
