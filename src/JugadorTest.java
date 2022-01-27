@@ -30,12 +30,12 @@ class JugadorTest {
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
-	void testSetNombreJugadoryaregistrado() {
-		Jugador jugador = new Jugador();
-		String nombrejugador = "";
-		jugador.setNombreJugador(nombrejugador);
-		assertEquals(null,jugador.getNombreJugador());
-	}
+//	void testSetNombreJugadoryaregistrado() {
+//		Jugador jugador = new Jugador();
+//		String nombrejugador = "";
+//		jugador.setNombreJugador(nombrejugador);
+//		assertEquals(null,jugador.getNombreJugador());
+//	}
 	
 	
 	@Test
