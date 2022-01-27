@@ -9,7 +9,7 @@ class EquipoTest {
 	//esta prueba es cuando tengo un equipo vac
 	public void testSetNombreEquipoVacio() {
 		Equipo equipo = new Equipo();
-		String nombrequipo="";
+		String nombrequipo=" ";
 		equipo.setNombreEquipo(nombrequipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}
@@ -97,15 +97,15 @@ class EquipoTest {
 				
 		}
 		
-		@Test
-		void testSetnombreEquipoyaregistrado() {
-			Equipo equipo = new Equipo();
-			String nombreEquipo = "Fcbarrio";
-			equipo.setNombreEquipo(nombreEquipo);
-			
-			assertEquals(null,equipo.getNombreEquipo());
-				
-		}
+//		@Test
+//		void testSetnombreEquipoyaregistrado() {
+//			Equipo equipo = new Equipo();
+//			String nombreEquipo = "Fcbarrio";
+//			equipo.setNombreEquipo(nombreEquipo);
+//			
+//			assertEquals(null,equipo.getNombreEquipo());
+//				
+//		}
 		
 
 	}
