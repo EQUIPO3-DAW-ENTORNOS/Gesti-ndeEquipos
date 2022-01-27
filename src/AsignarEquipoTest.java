@@ -4,68 +4,67 @@ import org.junit.jupiter.api.Test;
 
 class AsignarEquipoTest {
 	
-	
+//Asignar jugador	
 	@Test
-	void testSetNombreJugadorvacio() {
+	void testSetAsignarJugadornoexiste() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "";
+		String nombrejugador = " ";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
-	
 	@Test
-	void testSetNombreJugadorconmasde20caracteres() {
-		Jugador jugador = new Jugador();
-		String nombrejugador = "albertodanieldetodoslossantos";
-		jugador.setNombreJugador(nombrejugador);
-		assertEquals(null,jugador.getNombreJugador());
-	}
-	
-	@Test
-	void testSetNombreJugadorconmenosde20caracteres() {
-		Jugador jugador = new Jugador();
-		String nombrejugador = "albertodaniel";
-		jugador.setNombreJugador(nombrejugador);
-		assertEquals(nombrejugador,jugador.getNombreJugador());
-	}	
-	
-	@Test
-	void testSetNombreJugadoryaguardado() {
-		Jugador jugador = new Jugador();
-		String nombrejugador = "albertodaniel";
-		jugador.setNombreJugador(nombrejugador);
-		assertEquals(null,jugador.getNombreJugador());
-	}	
-	
-	@Test
-	void testSetNombreJugadoryaguardadoenotroequipo() {
-		Jugador jugador = new Jugador();
-		String nombrejugador = "albertodaniel";
-		jugador.setNombreJugador(nombrejugador);
-		assertEquals(null,jugador.getNombreJugador());
-	}	
-	@Test
-	void testNombreJugadorcon20caracteres() {
-		Jugador jugador = new Jugador();
-		String nombrejugador = "antonioantonioantonioantonio";
-		jugador.setNombreJugador(nombrejugador);
-		assertEquals(nombrejugador,jugador.getNombreJugador());
-	}
-	@Test
-	void testNombreJugadorqueyaexista() {
+	void testSetAsignarJugadorqueyaexista() {
 		Jugador jugador = new Jugador();
 		String nombrejugador = "antonio";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(nombrejugador,jugador.getNombreJugador());
 			
 	}
+	
 	@Test
-	void testNombreJugadorquenoexista() {
+	void testSetAsignarJugadorconmasde20caracteres() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "pepe";
+		String nombrejugador = "albertodanieldetodoslossantos";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
+	@Test
+	void testSetAsignarJugadorsinnombre() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = " ";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
+	}
+	@Test
+	void testSetAsignarJugadoredadincorrecta() {
+		Jugador jugador = new Jugador ();
+		int edadjugador = 5;
+		jugador.setEdad(5);
+		assertEquals(null,(Integer)jugador.getEdad());
+	}
+	@Test
+	void testSetAsignarJugadoredadvacía() {
+		Jugador jugador = new Jugador();
+		int edadjugador =0;
+		jugador.setEdad(0);
+		assertEquals(null,(Integer)jugador.getEdad());
+	}
+	@Test
+	void testSetAsignarJugadoridiomaincorrecto() {
+		Jugador jugador = new Jugador();
+		String idioma ="Polaco";
+		jugador.setIdioma("polaco");;
+		assertEquals(null,jugador.getIdioma());
+	}
+	@Test
+	void testSetAsignarJugadoridiomavacío() {
+		Jugador jugador = new Jugador();
+		String idioma =" ";
+		jugador.setIdioma(null);
+	}
+
+	
+//Asignar Equipo
 	@Test
 	void testNombreEquipovacio() {
 		Jugador jugador = new Jugador();
