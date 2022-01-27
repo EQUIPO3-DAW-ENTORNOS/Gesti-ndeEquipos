@@ -107,17 +107,5 @@ class EquipoTest {
 				
 		}
 		
-		
-
-
-		@Test
-		void testSetEdad() {
-			fail("Not yet implemented");
-		}
-
-		@Test
-		void testSetIdioma() {
-			fail("Not yet implemented");
-		}
 
 	}

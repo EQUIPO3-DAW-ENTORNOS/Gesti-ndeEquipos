@@ -32,7 +32,7 @@ class JugadorTest {
 	}
 	void testSetNombreJugadoryaregistrado() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "";
+		String nombrejugador = "antonio";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
@@ -52,8 +52,8 @@ class JugadorTest {
 		jugador.setEdad(16);
 		assertEquals(null,(Integer)jugador.getEdad());
 		
-	}
-	void testSetEdadCampoVacio() {
+		}
+		void testSetEdadCampoVacio() {
 	Jugador jugador=new Jugador();
 	String edadJugador=" ";
 	jugador.setEdad(0);
