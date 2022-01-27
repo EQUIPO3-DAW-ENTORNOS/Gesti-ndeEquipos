@@ -90,7 +90,7 @@ class EquipoTest {
 		@Test
 		void testSetnombreEquiponumerodecaracteresvacio() {
 			Equipo equipo = new Equipo();
-			String nombreEquipo = "";
+			String nombreEquipo = " ";
 			equipo.setNombreEquipo(nombreEquipo);
 			
 			assertEquals(null,equipo.getNombreEquipo());
