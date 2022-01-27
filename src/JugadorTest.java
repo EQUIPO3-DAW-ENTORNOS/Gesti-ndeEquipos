@@ -39,13 +39,13 @@ class JugadorTest {
 	
 	
 	@Test
-	//void testSetEdadRecibeLetra() {
-		
-		//Jugador jugador= new Jugador();
-		//String edadJugador="a";
 	
-	
-	
+	void testSetEdadRecibeLetra() {
+		Jugador jugador= new Jugador();
+		String edadJugador="a";
+		assertThrows(IllegalArgumentException.class, () -> {
+		});
+	}
 	void testSetEdadNoMenor() {// edad introducida no mayor de edad
 		Jugador jugador =new Jugador();
 		int edadJugador= 16;
