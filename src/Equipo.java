@@ -12,7 +12,23 @@ public class Equipo {
 		//code here
 	}
 	public void setRanking(int ranking) {
-		//code here
+		//Ranking mayor a 10.
+		if(ranking<10) {
+			this.ranking = (Integer) null;
+		}
+		//Hay que poner que ranking sea igual a vacío.
+		if(ranking=="") {
+			this.ranking = (Integer) null;
+		}
+		//Ranking con numero negativo.
+		if(ranking<0) {
+			this.ranking = (Integer) null;
+		}
+		//Hay que poner esta con todas las letras.
+		if(ranking=='m') {
+			this.ranking = (Integer) null;
+		}
+		
 	}
 	
 	public String getNombreEquipo() {
