@@ -46,7 +46,7 @@ class JugadorTest {
 	
 	
 	
-	void testSetEdadNoMenor() {// edad introducida no mayor de edad
+	void testSetEdadMenor() {// edad introducida no mayor de edad
 		Jugador jugador =new Jugador();
 		int edadJugador= 16;
 		jugador.setEdad(16);
@@ -61,18 +61,18 @@ class JugadorTest {
 	
 		}
 	
-	void testSetEdadCampoVacioMayorEdad(){
+	void testSetEdadMayorEdad(){
 		Jugador jugador=new Jugador();
 		int edadJugador=18;
 		jugador.setEdad(18);
-		assertEquals(null,(Integer)jugador.getEdad());
+		assertEquals(edadJugador,(Integer)jugador.getEdad());
 		
 		
 	}
 	
 
 	@Test
-	void ElegirIdioma() {
+	void ElegirIdiomaIncorrecto() {
 		Jugador jugador = new Jugador();
 		String idioma ="Chino";
 		jugador.setIdioma(idioma);
