@@ -6,6 +6,8 @@ public class AsignarEquipo {
       
       public AsignarEquipo() {
     	  
+    	 if(rankingEquipo==(integer)null){}
+  		 this.rankingEquipo=(integer)null;
       }
       
       public void setEquipo(Equipo equipo) {
