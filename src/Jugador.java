@@ -65,7 +65,7 @@ public class Jugador {
 			this.edad = edad;
 		}
 		//Edad recibe una letra.
-		if(edad=='m') {
+		if(edad==Integer.parseInt("m")) {
 			this.edad = (Integer)null;
 		}
 		
