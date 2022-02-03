@@ -7,7 +7,7 @@ class JugadorTest {
 	@Test
 	void testSetNombreJugadornumerodecaracteressuperiora20() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "antonioantonioantonioantonioantonioantonioantonioantonioantonioantonioantonioantonioantonioantonio";
+		String nombrejugador = "antonioantonioantonioantonioantonioantonioantonioantonioantonioantonio";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}

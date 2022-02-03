@@ -62,17 +62,13 @@ public class Jugador {
 		}
 		//Jugador menor de 18 años.
 		if(edad<18) {
-			this.edad  = (Integer) null;
+			this.edad  = edad;
 		}
 		//Jugador edad campo vacío.
 		if(edad!=vacío) {
-			this.edad = edad;
+			this.edad = vacío;
 		}
-		//Edad recibe una letra.
-		if(edad==Integer.parseInt("m")) {
-			this.edad = (Integer)null;
-		}
-		
+	
 		
 	}
 	public void setIdioma(String idioma) {	

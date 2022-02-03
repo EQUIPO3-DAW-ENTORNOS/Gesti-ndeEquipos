@@ -3,13 +3,13 @@ public class AsignarEquipo {
       private Equipo equipo;
       private Jugador jugador;
       
-      
-      public AsignarEquipo() {
-    	  
-    	 if(rankingEquipo==(integer)null){}
-  		 this.rankingEquipo=(integer)null;
-      }
-      
+//      
+//      public AsignarEquipo() {
+//    	  
+////    	 if(rankingEquipo==(integer)null){}
+////  		 this.rankingEquipo=(integer)null;
+////      }
+////      
       public void setEquipo(Equipo equipo) {
   		//code here
       }
