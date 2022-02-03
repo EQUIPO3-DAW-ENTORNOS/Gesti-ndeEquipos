@@ -28,19 +28,21 @@ public class Equipo {
 
 	
 	public void setRanking(int ranking) {
+	int vacío = -1;
+		
 		//Ranking mayor a 10.
 		if(ranking<10) {
 			this.ranking = (Integer) null;
 		}
-		//Hay que poner que ranking sea igual a vacío.-mirar como se pone vacío en un int
-		if(ranking==(Integer)null) {
+		//Hay que poner que ranking sea igual a vacío.
+		if(ranking!=vacío) {
 			this.ranking = (Integer) null;
 		}
 		//Ranking con numero negativo.
 		if(ranking<0) {
 			this.ranking = (Integer) null;
 		}
-		//Hay que poner esta con todas las letras.-mirar como se ponen todas las letras.
+		//Hay que poner esta con todas las letras.
 		if(ranking=='m') {
 			this.ranking = (Integer) null;
 		}

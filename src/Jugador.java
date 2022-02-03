@@ -10,7 +10,7 @@ public class Jugador {
 
 	public void setNombreJugador(String nombre) {
 		//Nombre de más de 20 caracteres.
-		if(nombre.length()<20) {
+		if(nombre.length()>20) {
 			this.nombre = null;
 		}
 		//Nombre con 20 caracteres.
@@ -38,13 +38,14 @@ public class Jugador {
 			this.nombre = null;
 		}	
 		//Nombre recibe un numero 
-//		if(nombre) {
-//			for(int i=0;i<=nombre.length()-1;i++) {
-//				char letra = nombre.charAt(i);
-//				Character.isLetter(letra);
-//		}
-//			
-//	}
+		for(int i=0;i<=nombre.length()-1;i++) {
+			char letra = nombre.charAt(i);
+				Character.isLetter(letra);
+		}if(nombre=nombre.charAt()){
+			this.nombre = nombre; 
+		}
+			
+	}
 			
 		
 	
@@ -64,7 +65,9 @@ public class Jugador {
 			this.edad = edad;
 		}
 		//Edad recibe una letra.
-//		if(edad)
+		if(edad=='m') {
+			this.edad = (Integer)null;
+		}
 		
 		
 	}
