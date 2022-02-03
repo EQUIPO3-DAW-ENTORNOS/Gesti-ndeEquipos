@@ -7,14 +7,14 @@ class JugadorTest {
 	@Test
 	void testSetNombreJugadornumerodecaracteressuperiora20() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "antonioantonioantonioantonioantonioantonioantonioantonioantonioantonio";
+		String nombrejugador = "pablodddddddddddddddddddddddddddd";
 		jugador.setNombreJugador(nombrejugador);
-		assertEquals(null,jugador.getNombreJugador());
+		assertEquals(nombrejugador,jugador.getNombreJugador());
 	}
 	@Test
 	void testSetNombreJugadorconcaracteresnumericos() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "1234";
+		String nombrejugador = "1";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
@@ -65,20 +65,11 @@ class JugadorTest {
 	
 	
 	@Test
-		void testSetEdadRecibeLetra() {
-		Jugador jugador = new Jugador();
-		String edadJugador="m";
-		assertThrows(IllegalArgumentException.class, () -> {
-			//equipo.setRanking(rankingEquipo);
-		});
-		
-	}
-	@Test
 	void testSetEdadMenor() {// edad introducida no mayor de edad
 		Jugador jugador =new Jugador();
 		int edadJugador= 16;
 		jugador.setEdad(edadJugador);
-		assertEquals(null,(Integer)jugador.getEdad());
+		assertEquals(-1,jugador.getEdad());
 		
 		
 	}

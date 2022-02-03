@@ -9,42 +9,31 @@ public class Jugador {
 		}
 
 	public void setNombreJugador(String nombre) {
-		//Nombre de más de 20 caracteres.
-		if(nombre.length()>20) {
+
+		if(nombre.length()<=20) {				//Nombre menor igual a 20.
+			this.nombre = nombre;
+		}else if(nombre.length()>20) {			//Nombre mayor que 20.			   
 			this.nombre = null;
 		}
-		//Nombre con 20 caracteres.
-		if(nombre.length()<=20) {
+		
+		if(nombre.length()<4) {					//Menor que 4.    
+			this.nombre = null;
+		}else if(nombre.length()>=4) {			//Nombre mayor igual a 4.    
 			this.nombre = nombre;
 		}
-		//Nombre con menos de 4 caracteres
-		if(nombre.length()<4) {
+		
+		if(nombre=="@") {						//Nombre caracteres especiales.            
 			this.nombre = null;
 		}
-		//Nombre con 4 caracteres
-		if(nombre.length()>=4) {
-			this.nombre = nombre;
-		}
-		//Nombre con más de 4 caracteres
-		if(nombre.length()>4) {
-			this.nombre = nombre;
-		}
-		//Nombre con caracteres especiales
-		if(nombre=="@") {
+		if(nombre.equals("")) {					//Nombre vacío.       
 			this.nombre = null;
-		}	
-		//Nombre campo vacío.
-		if(nombre.equals("")) {
-			this.nombre = null;
-		}	
-		//Nombre recibe un numero 
-//		for(int i=0;i<=nombre.length()-1;i++) {
-//			char letra = nombre.charAt(i);
-//				Character.isLetter(letra);
-//		}if(nombre=nombre.charAt()){
-//			this.nombre = nombre; 
-//		}
-			
+		}                          
+		for(int i=0;i<=nombre.length()-1;i++) { //Nombre con un número.
+		char letra = nombre.charAt(i);
+		if	(!Character.isLetter(letra) && letra !=20);
+	}
+		 
+		
 	}
 			
 		
@@ -52,20 +41,13 @@ public class Jugador {
 	public void setEdad(int edad) {
 	int vacío = -1;	
 	
-		//Jugador mayor de edad.
-		if(edad>=18) {
+		if(edad>=18) {				//Jugador mayor de edad.
 			this.edad = edad;
-		}
-		//Jugador con 18 años.
-		if(edad==18) {
+		}else if(edad==18) {		//Edad igual a 18.
 			this.edad = edad;
-		}
-		//Jugador menor de 18 años.
-		if(edad<18) {
-			this.edad  = edad;
-		}
-		//Jugador edad campo vacío.
-		if(edad!=vacío) {
+		}else if(edad<18) {			//Edad menor de 18.
+			this.edad  = vacío;
+		}else if(edad==vacío) {		//Edad vacía.
 			this.edad = vacío;
 		}
 	
@@ -75,23 +57,15 @@ public class Jugador {
 		//Idiomas correcto e incorrecto.
 		if(idioma.equals("Español")) {
 			this.idioma = idioma;
-		}
-		if(idioma.equals("Inglés")) {
+		}else if(idioma.equals("Inglés")) {
 			this.idioma = idioma;
-		}
-		if(idioma.equals("Aleman")) {
+		}else if(idioma.equals("Aleman")) {
 			this.idioma = idioma;
-		}
-		if(idioma.equals("Francés")) {
+		}else if(idioma.equals("Francés")) {
 			this.idioma = idioma;
-		}
-	
-		//Idioma vacío.
-		if(idioma.equals("")) {
+		}else if(idioma.equals("")) {     //Idioma vacío.
 			this.idioma = null;
-		}
-		//Elegir dos idiomas
-		if(idioma.equals("Español Inglés")) {
+		}else if(idioma.equals("Español Inglés")) {    //Elegir dos idiomas.
 			this.idioma = null;
 		}
 	}
