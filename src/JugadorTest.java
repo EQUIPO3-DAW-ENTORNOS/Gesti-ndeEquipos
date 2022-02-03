@@ -12,7 +12,7 @@ class JugadorTest {
 		assertEquals(null,jugador.getNombreJugador());
 	}
 	@Test
-	void testSetNombreJugadorconcaracteresnuimericos() {
+	void testSetNombreJugadorconcaracteresnumericos() {
 		Jugador jugador = new Jugador();
 		String nombrejugador = "1234";
 		jugador.setNombreJugador(nombrejugador);
@@ -30,21 +30,43 @@ class JugadorTest {
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
-//	void testSetNombreJugadoryaregistrado() {
-//		Jugador jugador = new Jugador();
-//		String nombrejugador = "";
-//		jugador.setNombreJugador(nombrejugador);
-//		assertEquals(null,jugador.getNombreJugador());
-//	}
+	void testSetNombreJugadorcaracteresespeciales() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "@";  //?¿/() ^^ [] ... ,, ;
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
+	}
+	void testSetNombreJugadorconmenosde4caracteres() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "ana";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
+	}
+	void testSetNombreJugadorconde4caracteres() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "iker";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(nombrejugador,jugador.getNombreJugador());
+	}
+	void testSetNombreJugadorconmásde4caracteres() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "aitor";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
+	}
+	
+
 	
 	
 	@Test
-	//void testSetEdadRecibeLetra() {
+		void testSetEdadRecibeLetra() {
+		Jugador jugador = new Jugador();
+		String edadJugador="m";
+		assertThrows(IllegalArgumentException.class, () -> {
+			//equipo.setRanking(rankingEquipo);
+		});
 		
-		//Jugador jugador= new Jugador();
-		//String edadJugador="a";
-	
-	
+	}
 	
 	void testSetEdadMenor() {// edad introducida no mayor de edad
 		Jugador jugador =new Jugador();
@@ -52,14 +74,16 @@ class JugadorTest {
 		jugador.setEdad(16);
 		assertEquals(null,(Integer)jugador.getEdad());
 		
-		}
+		
+	}
 		void testSetEdadCampoVacio() {
-	Jugador jugador=new Jugador();
-	String edadJugador=" ";
-	jugador.setEdad(0);
-	assertEquals(null,(Integer)jugador.getEdad());
+		Jugador jugador=new Jugador();
+		String edadJugador=" ";
+		jugador.setEdad(0);
+		assertEquals(null,(Integer)jugador.getEdad());
 	
-		}
+
+	}
 	
 	void testSetEdadMayorEdad(){
 		Jugador jugador=new Jugador();
