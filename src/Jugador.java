@@ -51,17 +51,21 @@ public class Jugador {
 	
 	public void setEdad(int edad) {
 	int vacío = -1;	
-		
+	
+		//Jugador mayor de edad.
+		if(edad>=18) {
+			this.edad = edad;
+		}
+		//Jugador con 18 años.
+		if(edad==18) {
+			this.edad = edad;
+		}
 		//Jugador menor de 18 años.
 		if(edad<18) {
 			this.edad  = (Integer) null;
 		}
 		//Jugador edad campo vacío.
 		if(edad!=vacío) {
-			this.edad = edad;
-		}
-		//Jugador mayor de edad.
-		if(edad>=18) {
 			this.edad = edad;
 		}
 		//Edad recibe una letra.

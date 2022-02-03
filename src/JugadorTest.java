@@ -77,7 +77,7 @@ class JugadorTest {
 	void testSetEdadMenor() {// edad introducida no mayor de edad
 		Jugador jugador =new Jugador();
 		int edadJugador= 16;
-		jugador.setEdad(16);
+		jugador.setEdad(edadJugador);
 		assertEquals(null,(Integer)jugador.getEdad());
 		
 		
@@ -85,9 +85,9 @@ class JugadorTest {
 	@Test
 	void testSetEdadCampoVacio() {
 		Jugador jugador=new Jugador();
-		String edadJugador=" ";
-		jugador.setEdad(0);
-		assertEquals(null,(Integer)jugador.getEdad());
+		int edadvacío=-1;
+		jugador.setEdad(edadvacío);
+		assertEquals(-1,jugador.getEdad());
 	
 
 	}
@@ -96,9 +96,17 @@ class JugadorTest {
 		Jugador jugador=new Jugador();
 		int edadJugador=18;
 		jugador.setEdad(18);
-		assertEquals(edadJugador,(Integer)jugador.getEdad());
+		assertEquals(edadJugador,jugador.getEdad());
 		
 		
+	}
+	@Test
+	void testSetEdadiguala18() {
+		Jugador jugador = new Jugador();
+		int edadJugador=18;
+		jugador.setEdad(edadJugador);
+		assertEquals(edadJugador,jugador.getEdad());
+				
 	}
 	
 
