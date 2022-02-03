@@ -58,7 +58,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombrejugador = "aitor";
 		jugador.setNombreJugador(nombrejugador);
-		assertEquals(null,jugador.getNombreJugador());
+		assertEquals(nombrejugador,jugador.getNombreJugador());
 	}
 	
 

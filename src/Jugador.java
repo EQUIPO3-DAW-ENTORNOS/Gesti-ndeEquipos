@@ -22,7 +22,7 @@ public class Jugador {
 			this.nombre = null;
 		}
 		//Nombre con 4 caracteres
-		if(nombre.length()==4) {
+		if(nombre.length()>=4) {
 			this.nombre = nombre;
 		}
 		//Nombre con más de 4 caracteres
@@ -38,12 +38,12 @@ public class Jugador {
 			this.nombre = null;
 		}	
 		//Nombre recibe un numero 
-		for(int i=0;i<=nombre.length()-1;i++) {
-			char letra = nombre.charAt(i);
-				Character.isLetter(letra);
-		}if(nombre=nombre.charAt()){
-			this.nombre = nombre; 
-		}
+//		for(int i=0;i<=nombre.length()-1;i++) {
+//			char letra = nombre.charAt(i);
+//				Character.isLetter(letra);
+//		}if(nombre=nombre.charAt()){
+//			this.nombre = nombre; 
+//		}
 			
 	}
 			
