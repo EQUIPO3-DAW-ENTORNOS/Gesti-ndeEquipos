@@ -10,56 +10,88 @@ public class Jugador {
 
 	public void setNombreJugador(String nombre) {
 		//Nombre de más de 20 caracteres.
-		if(nombre=="antonioantonioantonioantonioantonioantonioantonio") {
+		if(nombre.length()>20) {
 			this.nombre = null;
 		}
 		//Nombre con 20 caracteres.
-		if(nombre=="pedropablopedropablopedropablo") {
+		if(nombre.length()<=20) {
 			this.nombre = nombre;
 		}
+		//Nombre con menos de 4 caracteres
+		if(nombre.length()<4) {
+			this.nombre = null;
+		}
+		//Nombre con 4 caracteres
+		if(nombre.length()==4) {
+			this.nombre = nombre;
+		}
+		//Nombre con más de 4 caracteres
+		if(nombre.length()>4) {
+			this.nombre = nombre;
+		}
+		//Nombre con caracteres especiales
+		if(nombre=="@") {
+			this.nombre = null;
+		}	
 		//Nombre campo vacío.
-		if(nombre==" ") {
+		if(nombre.equals("")) {
 			this.nombre = null;
+		}	
+		//Nombre recibe un numero 
+		for(int i=0;i<=nombre.length()-1;i++) {
+			char letra = nombre.charAt(i);
+				Character.isLetter(letra);
+		}if(nombre=nombre.charAt()){
+			this.nombre = nombre; 
 		}
-		//Nombre recibe un numero.
-		if(nombre=="1234") {
-			this.nombre = null;
-		}
+			
 	}
 			
 		
 	
 	public void setEdad(int edad) {
+	int vacío = -1;	
+		
 		//Jugador menor de 18 años.
 		if(edad<18) {
 			this.edad  = (Integer) null;
 		}
-		//Jugador edad campo vacío.-mirar como se pone vacío en un int
-		if(edad==" ") {
-			this.edad = (Integer) null;
-		}
-		//Jugador edad = 18.-mirar si esta bien esto
-		if(edad==18) {
+		//Jugador edad campo vacío.
+		if(edad!=vacío) {
 			this.edad = edad;
 		}
+		//Jugador mayor de edad.
+		if(edad>=18) {
+			this.edad = edad;
+		}
+		//Edad recibe una letra.
+		if(edad=='m') {
+			this.edad = (Integer)null;
+		}
+		
+		
 	}
-	public void setIdioma(String idioma) {
-		//Idioma erroneo.-mirar como añadir más posibilidades.
-		if(idioma=="Chino") {
-			this.idioma = null;
-		}
-		//Idioma campo vacío.
-		if(idioma==" ") {
-			this.idioma = null;
-		}
-		//Idioma elegido es correcto.-Mirar como poner más de uno y sí de esta manera es correcto.
-		if(idioma=="Español") {
+	public void setIdioma(String idioma) {	
+		//Idiomas correcto e incorrecto.
+		if(idioma.equals("Español")) {
 			this.idioma = idioma;
 		}
-//		if(idioma=="Inglés") {
-//			this.idioma = idioma;
-//		}
-		if(idioma=="Inglés Español") {
+		if(idioma.equals("Inglés")) {
+			this.idioma = idioma;
+		}
+		if(idioma.equals("Aleman")) {
+			this.idioma = idioma;
+		}
+		if(idioma.equals("Francés")) {
+			this.idioma = idioma;
+		}
+	
+		//Idioma vacío.
+		if(idioma.equals("")) {
+			this.idioma = null;
+		}
+		//Elegir dos idiomas
+		if(idioma.equals("Español Inglés")) {
 			this.idioma = null;
 		}
 	}
