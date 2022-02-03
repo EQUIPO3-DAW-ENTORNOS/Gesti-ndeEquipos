@@ -20,18 +20,29 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombrequipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}
+	
+			
 	@Test
-	void testSetnombreEquiponumerodecaracteressuperiora20() {
+	void testSetnombreEquiponumerodecaracteresIgualValorlimite4() {
 		Equipo equipo = new Equipo();
-		String nombreEquipo = "Fcbarrio90123456789012345";
+		String nombreEquipo="FCBA";
+		equipo.setNombreEquipo(nombreEquipo);
+		
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
+		
+	}
+	@Test
+	void testSetnombreEquiponumerodecaracteresMenorValorlimite4() {
+		Equipo equipo= new Equipo();
+		String nombreEquipo="FCB";
 		equipo.setNombreEquipo(nombreEquipo);
 		
 		assertEquals(null,equipo.getNombreEquipo());
-			
+		
 	}
-	
+
 	@Test
-	void testSetnombreEquiponumerodecaracteresmenora20() {
+	void testSetnombreEquiponumerodecaracteresmenorValorlimite20() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Fcbarrio";
 		equipo.setNombreEquipo(nombreEquipo);
@@ -41,25 +52,37 @@ class EquipoTest {
 	}
 	
 	@Test
-	void testSetnombreEquiponumerodecaracteres20() {
+	void testSetnombreEquiponumerodecaracteresIgualaValorlimite20() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Fcbarrio901234567890";
 		equipo.setNombreEquipo(nombreEquipo);
 		
 		assertEquals(nombreEquipo,equipo.getNombreEquipo());
+	}
+		@Test
+	void testSetnombreEquiponumerodecaracteresMayorValorlimite20() {
+			Equipo equipo = new Equipo();
+			String nombreEquipo = "Fcbarrio901234567890445";
+			equipo.setNombreEquipo(nombreEquipo);
+			
+			assertEquals(null,equipo.getNombreEquipo());
+
+			
+	}
+		@Test
+		void testSetnombreEquipoCaracteresEspeciales() {
+			Equipo equipo = new Equipo();
+			String nombreEquipo = "Fcbarrio90";
+			equipo.setNombreEquipo(nombreEquipo);
+			
+			assertEquals(null,equipo.getNombreEquipo());
+
 			
 	}
 	
-	
-	@Test
-	void testSetnombreEquiponumerodecaracteresvacio() {
-		Equipo equipo = new Equipo();
-		String nombreEquipo = " ";
-		equipo.setNombreEquipo(nombreEquipo);
-		
-		assertEquals(null,equipo.getNombreEquipo());
+
 			
-	}
+	
 	
 //	@Test
 //	void testSetnombreEquipoyaregistrado() {

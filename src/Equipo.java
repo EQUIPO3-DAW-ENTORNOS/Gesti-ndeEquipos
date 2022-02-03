@@ -9,15 +9,31 @@ public class Equipo {
 	
 	
 	public void setNombreEquipo(String nombreEquipo) {
-		//code here
+		if(nombreEquipo.equals(" ")) {
+			this.nombreEquipo=null;
+		}
+		if(nombreEquipo.length()>=20) {
+			this.nombreEquipo=null;
+		}
+		if(nombreEquipo.length()>=4) {
+			this.nombreEquipo=nombreEquipo;
+		}
+		if(nombreEquipo.length()>20) {
+			this.nombreEquipo=null;
+		}
+		if(nombreEquipo.equals("Fcbarrio90")) {
+			this.nombreEquipo=null;
+		}
 	}
+
+	
 	public void setRanking(int ranking) {
 		//Ranking mayor a 10.
 		if(ranking<10) {
 			this.ranking = (Integer) null;
 		}
 		//Hay que poner que ranking sea igual a vacío.-mirar como se pone vacío en un int
-		if(ranking==" ") {
+		if(ranking==(Integer)null) {
 			this.ranking = (Integer) null;
 		}
 		//Ranking con numero negativo.
