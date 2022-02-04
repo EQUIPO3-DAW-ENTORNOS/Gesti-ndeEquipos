@@ -99,17 +99,17 @@ class AsignarEquipoTest {
 	@Test
 	void testSetAsignarEquiporankingincorrecto() {
 		Equipo equipo = new Equipo();
-		String rankingEquipo="m";
+		Integer.parseInt("m");
 		assertThrows(IllegalArgumentException.class, () -> {
 			//equipo.setRanking(rankingEquipo);
 		});	
 	}
 	@Test
-	void testSetAsignarEquiporankingvacío() {
+	void testSetAsignarEquiporankingVacío() {
 		Equipo equipo = new Equipo();
-		int rankingEquipo =0;
-		equipo.setRanking(rankingEquipo);
-		assertEquals(null,(Integer)equipo.getRanking());
+		int rankingVacío =-1;
+		equipo.setRanking(rankingVacío);
+		assertEquals(-1,equipo.getRanking());
 	}
 	
 }
