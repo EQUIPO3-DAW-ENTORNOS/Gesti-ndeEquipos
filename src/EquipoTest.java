@@ -128,6 +128,103 @@ class EquipoTest {
 		equipo.setRanking(rankingvacío);
 		assertEquals(-1,equipo.getRanking());
 	}
+	
+	
+	
+//Nuevas pruebas para la Story 6 categoríaEquipo.	
+	@Test
+	void testSetcategoriaEquiporanking7a10() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="Los limones";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking = 8;
+		equipo.setRanking(ranking);
+		assertEquals("Primera",equipo.categoriaequipo());
+	}
+	@Test
+	void testSetcategoriaEquiporanking7a10con7() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="Los limones";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking = 7;
+		equipo.setRanking(ranking);
+		assertEquals("Primera",equipo.categoriaequipo());
+	}
+	@Test
+	void testSetcategoriaEquiporanking7a10con10() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="Los limones";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking = 10;
+		equipo.setRanking(ranking);
+		assertEquals("Primera",equipo.categoriaequipo());
+	}
+	@Test
+	void testSetcategoriaEquiporanking7a10conNombrevacío() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking = 8;
+		equipo.setRanking(ranking);
+		assertEquals("Primera",equipo.categoriaequipo());
+	}
+	@Test
+	void testSetcategoriaEquiporanking3a6() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="Los limones";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking = 4;
+		equipo.setRanking(ranking);
+		assertEquals("Segunda",equipo.categoriaequipo());
+	}
+	@Test
+	void testSetcategoriaEquiporanking3a6con3() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="Los limones";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking = 3;
+		equipo.setRanking(ranking);
+		assertEquals("Segunda",equipo.categoriaequipo());
+	}
+	@Test
+	void testSetcategoriaEquiporanking3a6con6() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="Los limones";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking = 6;
+		equipo.setRanking(ranking);
+		assertEquals("Segunda",equipo.categoriaequipo());
+	}
+	@Test
+	void testSetcategoriaEquiporanking3a6concampovacío() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking =4 ;
+		equipo.setRanking(ranking);
+		assertEquals("Segunda",equipo.categoriaequipo());
+	}
+	@Test
+	void testSetcategoriaEquiporankingmenor3() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="Los limones";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking =2 ;
+		equipo.setRanking(ranking);
+		assertEquals("Tercera",equipo.categoriaequipo());
+	}
+	@Test
+	void testSetcategoriaEquiporankingmenor3campovacío() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo="";
+		equipo.setNombreEquipo(nombreEquipo);
+		int ranking =2 ;
+		equipo.setRanking(ranking);
+		assertEquals("Tercera",equipo.categoriaequipo());
+	}
+
+
+
 
 
 		
