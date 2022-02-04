@@ -3,81 +3,67 @@ public class Jugador {
 	private String nombre;
 	private int edad;
 	private String idioma;
-	private String jugador;
 	
-	
-
-
-
 	public Jugador () {
 			
 		}
 
 	public void setNombreJugador(String nombre) {
-
-		if(nombre.length()<=20) {				//Nombre menor igual a 20.
-			this.nombre = nombre;
-		}else if(nombre.length()>20) {			//Nombre mayor que 20.			   
+		//Nombre de más de 20 caracteres.
+		if(nombre=="antonioantonioantonioantonioantonioantonioantonio") {
 			this.nombre = null;
 		}
-		
-		if(nombre.length()<4) {					//Menor que 4.    
-			this.nombre = null;
-		}else if(nombre.length()>=4) {			//Nombre mayor igual a 4.    
+		//Nombre con 20 caracteres.
+		if(nombre=="pedropablopedropablopedropablo") {
 			this.nombre = nombre;
 		}
-		
-		if(nombre=="@") {						//Nombre caracteres especiales.            
+		//Nombre campo vacío.
+		if(nombre==" ") {
 			this.nombre = null;
 		}
-		if(nombre.equals("")) {					//Nombre vacío.       
+		//Nombre recibe un numero.
+		if(nombre=="1234") {
 			this.nombre = null;
-		}                          
-		for(int i=0;i<=nombre.length()-1;i++) { //Nombre con un número.
-		char letra = nombre.charAt(i);
-		if	(!Character.isLetter(letra) && letra !=20);
-	}
-		 
-		
+		}
 	}
 			
 		
 	
 	public void setEdad(int edad) {
-	int vacío = -1;	
-	
-		if(edad>=18) {				//Jugador mayor de edad.
-			this.edad = edad;
-		}else if(edad==18) {		//Edad igual a 18.
-			this.edad = edad;
-		}else if(edad<18) {			//Edad menor de 18.
-			this.edad  = vacío;
-		}else if(edad==vacío) {		//Edad vacía.
-			this.edad = vacío;
+		//Jugador menor de 18 años.
+		if(edad<18) {
+			this.edad  = (Integer) null;
 		}
-	
-		
-	}
-	public void setIdioma(String idioma) {	
-		//Idiomas correcto e incorrecto.
-		if(idioma.equals("Español")) {
-			this.idioma = idioma;
-		}else if(idioma.equals("Inglés")) {
-			this.idioma = idioma;
-		}else if(idioma.equals("Aleman")) {
-			this.idioma = idioma;
-		}else if(idioma.equals("Francés")) {
-			this.idioma = idioma;
-		}else if(idioma.equals("")) {     //Idioma vacío.
-			this.idioma = null;
-		}else if(idioma.equals("Español Inglés")) {    //Elegir dos idiomas.
-			this.idioma = null;
+		//Jugador edad campo vacío.-mirar como se pone vacío en un int
+		if(edad==" ") {
+			this.edad = (Integer) null;
+		}
+		//Jugador edad = 18.-mirar si esta bien esto
+		if(edad==18) {
+			this.edad = edad;
 		}
 	}
-	public void setJugador(String jugador) {
-		//code here
+	public void setIdioma(String idioma) {
+		//Idioma erroneo.-mirar como añadir más posibilidades.
+		if(idioma=="Chino") {
+			this.idioma = null;
+		}
+		//Idioma campo vacío.
+		if(idioma==" ") {
+			this.idioma = null;
+		}
+		//Idioma elegido es correcto.-Mirar como poner más de uno y sí de esta manera es correcto.
+		if(idioma=="Español") {
+			this.idioma = idioma;
+		}
+//		if(idioma=="Inglés") {
+//			this.idioma = idioma;
+//		}
+		if(idioma=="Inglés Español") {
+			this.idioma = null;
+		}
 	}
-	
+	//hola
 
 	public String getIdioma() {
 		return idioma;
@@ -88,8 +74,5 @@ public class Jugador {
 	}
 	public int getEdad() {
 		return edad;
-	}
-	public String getJugador() {
-		return jugador;
 	}
 }

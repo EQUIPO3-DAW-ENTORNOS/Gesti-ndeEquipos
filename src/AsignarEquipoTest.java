@@ -87,6 +87,7 @@ class AsignarEquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		
 		assertEquals(null,equipo.getNombreEquipo());
+		//prueba
 	}
 	@Test
 	void testSetAsignarEquiposinnombre(){
