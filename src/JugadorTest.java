@@ -141,10 +141,129 @@ class JugadorTest {
 		
 		assertEquals(null,jugador.getIdioma());
 	}
+//Nuevos test para el metodo nuevo tipo jugador story 5.
 	@Test
 	void TipoJugador18y25() {
 		Jugador jugador = new Jugador();
-		String jugador = 
+		String nombre = "Iker";
+		jugador.setNombreJugador(nombre);
+		int edad = 19;
+		jugador.setEdad(edad);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals("Junior",jugador.tipoJugador());		
 	}
+	@Test
+	void TipoJugador18y25con18() {
+		Jugador jugador = new Jugador();
+		String nombre = "Iker";
+		jugador.setNombreJugador(nombre);
+		int edad = 18;
+		jugador.setEdad(edad);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals("Junior",jugador.tipoJugador());		
+	}
+	@Test
+	void TipoJugador18y25con25() {
+		Jugador jugador = new Jugador();
+		String nombre = "Iker";
+		jugador.setNombreJugador(nombre);
+		int edad = 25;
+		jugador.setEdad(edad);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals("Junior",jugador.tipoJugador());		
+	}
+	@Test
+	void TipoJugador18y25concampovacíonombre() {
+		Jugador jugador = new Jugador();
+		String nombre = "";
+		jugador.setNombreJugador(nombre);
+		int edad = 22;
+		jugador.setEdad(edad);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals(null,jugador.tipoJugador());
+	}
+	@Test
+	void TipoJugador25y35() {
+		Jugador jugador = new Jugador();
+		String nombre = "aitor";
+		jugador.setNombreJugador(nombre);
+		int edad = 26;
+		jugador.setEdad(edad);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals("Senior",jugador.tipoJugador());
+	}
+	@Test
+	void TipoJugador25y35con25() {
+		Jugador jugador = new Jugador();
+		String nombre = "aitor";
+		jugador.setNombreJugador(nombre);
+		int edad = 25;
+		jugador.setEdad(edad);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals("Senior",jugador.tipoJugador());
+	}
+	@Test
+	void TipoJugador25y35con35() {
+		Jugador jugador = new Jugador();
+		String nombre = "aitor";
+		jugador.setNombreJugador(nombre);
+		int edad = 35;
+		jugador.setEdad(edad);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals("Senior",jugador.tipoJugador());
+	}
+	@Test
+	void TipoJugador25y35concampoidiomavacío() {
+		Jugador jugador = new Jugador();
+		String nombre = "aitor";
+		jugador.setNombreJugador(nombre);
+		int edad = 26;
+		jugador.setEdad(edad);
+		String idioma = "";
+		jugador.setIdioma(idioma);
+		assertEquals(null,jugador.tipoJugador());
+	}
+	@Test
+	void TipoJugadormásde35años() {
+		Jugador jugador = new Jugador();
+		String nombre = "Pedro";
+		jugador.setNombreJugador(nombre);
+		int edad = 36;
+		jugador.setEdad(edad);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals("Master",jugador.tipoJugador());
+	}
+	@Test
+	void TipoJugadormásde35añoscon35() {
+		Jugador jugador = new Jugador();
+		String nombre = "Pedro";
+		jugador.setNombreJugador(nombre);
+		int edad = 35;
+		jugador.setEdad(edad);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals("Master",jugador.tipoJugador());
+	}
+	@Test
+	void TipoJugadormásde35añosconcampoedadvacío() {   //si no funciona a la primera cambiar el vacío en vez de edad por nombre o idioma.
+		Jugador jugador = new Jugador();
+		String nombre = "Pedro";
+		jugador.setNombreJugador(nombre);
+		int edadvacío = -1;
+		jugador.setEdad(edadvacío);
+		String idioma = "Español";
+		jugador.setIdioma(idioma);
+		assertEquals(-1,jugador.tipoJugador());
+	}
+	
+//Nuevos test para el metodo nuevo categoría equipo story 6.
 	
 }

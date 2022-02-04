@@ -3,7 +3,7 @@ public class Jugador {
 	private String nombre;
 	private int edad;
 	private String idioma;
-	private String jugador;
+	private String tipojugador;
 	
 	
 
@@ -68,13 +68,13 @@ public class Jugador {
 			this.idioma = idioma;
 		}else if(idioma.equals("Francés")) {
 			this.idioma = idioma;
-		}else if(idioma.equals("")) {     //Idioma vacío.
+		}else if(idioma.equals("")) {     				//Idioma vacío.
 			this.idioma = null;
 		}else if(idioma.equals("Español Inglés")) {    //Elegir dos idiomas.
 			this.idioma = null;
 		}
 	}
-	public void setJugador(String jugador) {
+	public void tipoJugador(String jugador) {
 		//code here
 	}
 	
@@ -89,7 +89,7 @@ public class Jugador {
 	public int getEdad() {
 		return edad;
 	}
-	public String getJugador() {
-		return jugador;
+	public String tipoJugador() {
+		return "";
 	}
 }

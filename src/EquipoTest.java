@@ -106,7 +106,7 @@ class EquipoTest {
 		assertEquals(rankingEquipo,equipo.getRanking());
 	}
 	
-	@Test
+	//@Test
 	void testSetrankingrecibeunaletra() {
 		Equipo equipo = new Equipo();
 		String rankingEquipo="m";

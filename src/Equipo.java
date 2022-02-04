@@ -37,9 +37,10 @@ public class Equipo {
 			this.ranking = rankingvacío;
 		}else if(ranking<0) {
 			this.ranking = rankingvacío;
-		}else if(ranking=='m') {
-			this.ranking = rankingvacío;
 		}
+//			else if(ranking=='m') {
+//			this.ranking = rankingvacío;
+//		}
 		
 	}
 	
