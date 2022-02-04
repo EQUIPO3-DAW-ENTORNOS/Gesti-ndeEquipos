@@ -3,7 +3,12 @@ public class Jugador {
 	private String nombre;
 	private int edad;
 	private String idioma;
+	private String jugador;
 	
+	
+
+
+
 	public Jugador () {
 			
 		}
@@ -69,6 +74,9 @@ public class Jugador {
 			this.idioma = null;
 		}
 	}
+	public void setJugador(String jugador) {
+		//code here
+	}
 	
 
 	public String getIdioma() {
@@ -80,5 +88,8 @@ public class Jugador {
 	}
 	public int getEdad() {
 		return edad;
+	}
+	public String getJugador() {
+		return jugador;
 	}
 }

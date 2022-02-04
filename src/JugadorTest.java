@@ -141,5 +141,10 @@ class JugadorTest {
 		
 		assertEquals(null,jugador.getIdioma());
 	}
+	@Test
+	void TipoJugador18y25() {
+		Jugador jugador = new Jugador();
+		String jugador = 
+	}
 	
 }
