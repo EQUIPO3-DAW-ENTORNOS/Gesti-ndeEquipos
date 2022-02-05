@@ -74,7 +74,7 @@ public class Jugador {
 			this.idioma = null;
 		}
 	}
-	public void tipoJugador(String jugador) {
+	public void tipoJugador(String tipojugador) {
 		//code here
 	}
 	
