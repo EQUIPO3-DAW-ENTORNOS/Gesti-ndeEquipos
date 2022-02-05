@@ -264,6 +264,5 @@ class JugadorTest {
 		assertEquals(-1,jugador.tipoJugador());
 	}
 	
-//Nuevos test para el metodo nuevo categoría equipo story 6.
 	
 }
