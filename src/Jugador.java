@@ -76,6 +76,7 @@ public class Jugador {
 	}
 	public void tipoJugador(String tipojugador) {
 		//code here
+		
 	}
 	
 
@@ -91,5 +92,17 @@ public class Jugador {
 	}
 	public String tipoJugador() {
 		return "";
+	}
+
+	public void setTipojugador(String tipojugador) {
+		if(edad<18) {
+			this.tipojugador = null;
+		}else if(edad>=18&&edad<25){
+			this.tipojugador = "Junior";
+		}else if(edad>=25&&edad<35){
+			this.tipojugador = "Senior";
+		}else if(edad>35){
+			this.tipojugador = "Master";
+		}
 	}
 }
