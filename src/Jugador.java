@@ -14,7 +14,6 @@ public class Jugador {
 		}
 
 	public void setNombreJugador(String nombre) {
-		
 		if(nombre.length()<=20) {				//Nombre menor igual a 20.
 			this.nombre = nombre;
 		}else if(nombre.length()>20) {			//Nombre mayor que 20.			   
@@ -43,7 +42,7 @@ public class Jugador {
 	public void setEdad(int edad) {
 	int vacío = -1;	
 	
-		if(edad>=18) {				//Jugador mayor de edad.
+		if(edad>18) {				//Jugador mayor de edad.
 			this.edad = edad;
 		}else if(edad==18) {		//Edad igual a 18.
 			this.edad = edad;
@@ -52,7 +51,7 @@ public class Jugador {
 		}else if(edad==vacío) {		//Edad vacía.
 			this.edad = vacío;
 		}
-	
+ 
 		
 	}
 	public void setIdioma(String idioma) {	
