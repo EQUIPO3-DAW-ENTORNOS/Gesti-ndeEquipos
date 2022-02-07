@@ -74,10 +74,7 @@ public class Jugador {
 			this.idioma = null;
 		}
 	}
-	public void tipoJugador(String tipojugador) {
-		//code here
-		
-	}
+	
 	
 
 	public String getIdioma() {
@@ -91,10 +88,7 @@ public class Jugador {
 		return edad;
 	}
 	public String tipoJugador() {
-		return "";
-	}
-
-	public void setTipojugador(String tipojugador) {
+		int edad = this.edad;
 		if(edad<18) {
 			this.tipojugador = null;
 		}else if(edad>=18&&edad<25){
@@ -103,6 +97,9 @@ public class Jugador {
 			this.tipojugador = "Senior";
 		}else if(edad>35){
 			this.tipojugador = "Master";
+			
 		}
-	}
+
+	
+}
 }
