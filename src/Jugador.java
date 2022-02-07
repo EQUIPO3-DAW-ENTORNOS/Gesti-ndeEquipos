@@ -97,9 +97,9 @@ public class Jugador {
 		}else if(edad>=35){
 			return "Master";
 			
-		}
-		return null;
-		
+		}else {
+		return this.tipojugador=null;
+	}
 	
 }
 }

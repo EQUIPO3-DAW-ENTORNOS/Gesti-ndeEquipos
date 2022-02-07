@@ -141,7 +141,12 @@ class JugadorTest {
 		
 		assertEquals(null,jugador.getIdioma());
 	}
-//Nuevos test para el metodo nuevo tipo jugador story 5.
+
+
+
+
+
+	//Nuevos test para el metodo nuevo tipo jugador story 5.
 	@Test
 	void TipoJugador18y25() {
 		Jugador jugador = new Jugador();
