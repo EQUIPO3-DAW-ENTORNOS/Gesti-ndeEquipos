@@ -88,17 +88,17 @@ public class Jugador {
 		return edad;
 	}
 	public String tipoJugador() {
-		int edad = this.edad;
 		if(edad<18) {
-			this.tipojugador = null;
+			return null;
 		}else if(edad>=18&&edad<25){
-			this.tipojugador = "Junior";
+			return "Junior";
 		}else if(edad>=25&&edad<35){
-			this.tipojugador = "Senior";
-		}else if(edad>35){
-			this.tipojugador = "Master";
+			return "Senior";
+		}else if(edad>=35){
+			return "Master";
 			
 		}
+		return null;
 
 	
 }

@@ -173,7 +173,7 @@ class JugadorTest {
 		jugador.setEdad(edad);
 		String idioma = "Español";
 		jugador.setIdioma(idioma);
-		assertEquals("Junior",jugador.tipoJugador());		
+		assertEquals("Senior",jugador.tipoJugador());		
 	}
 	@Test
 	void TipoJugador18y25concampovacíonombre() {
@@ -217,7 +217,7 @@ class JugadorTest {
 		jugador.setEdad(edad);
 		String idioma = "Español";
 		jugador.setIdioma(idioma);
-		assertEquals("Senior",jugador.tipoJugador());
+		assertEquals("Master",jugador.tipoJugador());
 	}
 	@Test
 	void TipoJugador25y35concampoidiomavacío() {
