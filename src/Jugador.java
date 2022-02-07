@@ -40,9 +40,6 @@ public class Jugador {
 		 
 		
 	}
-			
-		
-	
 	public void setEdad(int edad) {
 	int vacío = -1;	
 	
@@ -80,7 +77,6 @@ public class Jugador {
 	public String getIdioma() {
 		return idioma;
 	}
-	
 	public String getNombreJugador() {
 		return nombre;
 	}
