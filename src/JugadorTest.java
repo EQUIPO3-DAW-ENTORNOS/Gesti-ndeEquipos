@@ -253,7 +253,7 @@ class JugadorTest {
 		assertEquals("Master",jugador.tipoJugador());
 	}
 	@Test
-	void TipoJugadormásde35añosconcampoedadvacío() {   //si no funciona a la primera cambiar el vacío en vez de edad por nombre o idioma.
+	void TipoJugadormásde35añosconcampoedadvacío() {   
 		Jugador jugador = new Jugador();
 		String nombre = "Pedro";
 		jugador.setNombreJugador(nombre);

@@ -80,24 +80,6 @@ class EquipoTest {
 			
 	}
 	
-
-			
-	
-	
-//	@Test
-//	void testSetnombreEquipoyaregistrado() {
-//		Equipo equipo = new Equipo();
-//		String nombreEquipo = "Fcbarrio";
-//		equipo.setNombreEquipo(nombreEquipo);
-//		
-//		assertEquals(null,equipo.getNombreEquipo());
-//			
-//	}
-
-	
-	
-	
-
 	//@Test
 	void testSetrankingnumeroentre0y10() {
 		Equipo equipo = new Equipo();

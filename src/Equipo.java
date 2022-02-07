@@ -39,9 +39,7 @@ public class Equipo {
 		}else if(ranking<0) {
 			this.ranking = rankingvacío;
 		}
-//			else if(ranking=='m') {
-//			this.ranking = rankingvacío;
-//		}
+
 		
 	}
 	public void categoriaequipo(String categoriaequipo) {
