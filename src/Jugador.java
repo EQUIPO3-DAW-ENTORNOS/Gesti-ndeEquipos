@@ -14,7 +14,7 @@ public class Jugador {
 		}
 
 	public void setNombreJugador(String nombre) {
-
+		
 		if(nombre.length()<=20) {				//Nombre menor igual a 20.
 			this.nombre = nombre;
 		}else if(nombre.length()>20) {			//Nombre mayor que 20.			   
@@ -92,10 +92,10 @@ public class Jugador {
 			return "Senior";
 		}else if(edad>=35){
 			return "Master";
-			
 		}else {
-		return this.tipojugador=null;
+		return null;
 	}
 	
 }
+
 }
