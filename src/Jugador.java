@@ -83,7 +83,13 @@ public class Jugador {
 		return edad;
 	}
 	public String tipoJugador() {
-		if(edad<18) {
+		if(nombre==null) {
+			return null;
+		}else if(idioma==null) {
+			return null;
+		}else if(edad==-1) {
+			return null;
+		}else if(edad<18) {
 			return null;
 		}else if(edad>=18&&edad<25){
 			return "Junior";

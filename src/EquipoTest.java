@@ -13,7 +13,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombrequipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}
-	
+	@Test
 	public void testSetNombreEquipoCompleto() {
 		Equipo equipo = new Equipo();
 		String nombrequipo="";
@@ -59,7 +59,7 @@ class EquipoTest {
 		
 		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
-		@Test
+	@Test
 	void testSetnombreEquiponumerodecaracteresMayorValorlimite20() {
 			Equipo equipo = new Equipo();
 			String nombreEquipo = "Fcbarrio901234567890445";
@@ -80,7 +80,7 @@ class EquipoTest {
 			
 	}
 	
-	//@Test
+	@Test
 	void testSetrankingnumeroentre0y10() {
 		Equipo equipo = new Equipo();
 		int rankingEquipo=9;
@@ -88,15 +88,6 @@ class EquipoTest {
 		assertEquals(rankingEquipo,equipo.getRanking());
 	}
 	
-	//@Test
-	void testSetrankingrecibeunaletra() {
-		Equipo equipo = new Equipo();
-		String rankingEquipo="m";
-		assertThrows(IllegalArgumentException.class, () -> {
-			//equipo.setRanking(rankingEquipo);
-		});
-		
-	}
 	@Test
 	void testSetrankingrecibeunnumeronegativo() {
 		Equipo equipo = new Equipo();
@@ -148,7 +139,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking = 8;
 		equipo.setRanking(ranking);
-		assertEquals("Primera",equipo.categoriaequipo());
+		assertEquals(null,equipo.categoriaequipo());
 	}
 	@Test
 	void testSetcategoriaEquiporanking3a6() {
@@ -184,7 +175,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking =4 ;
 		equipo.setRanking(ranking);
-		assertEquals("Segunda",equipo.categoriaequipo());
+		assertEquals(null,equipo.categoriaequipo());
 	}
 	@Test
 	void testSetcategoriaEquiporankingmenor3() {
@@ -202,7 +193,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking =2 ;
 		equipo.setRanking(ranking);
-		assertEquals("Tercera",equipo.categoriaequipo());
+		assertEquals(null,equipo.categoriaequipo());
 	}
 
 

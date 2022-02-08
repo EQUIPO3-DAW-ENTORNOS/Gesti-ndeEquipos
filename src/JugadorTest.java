@@ -203,7 +203,7 @@ class JugadorTest {
 		jugador.setEdad(edad);
 		String idioma = "Español";
 		jugador.setIdioma(idioma);
-		assertEquals(nombre,jugador.tipoJugador());
+		assertEquals(null,jugador.tipoJugador());
 	}
 	@Test
 	void TipoJugador25y35() {
@@ -280,7 +280,7 @@ class JugadorTest {
 		jugador.setEdad(edadvacío);
 		String idioma = "Español";
 		jugador.setIdioma(idioma);
-		assertEquals(-1,jugador.tipoJugador());
+		assertEquals(null,jugador.tipoJugador());
 	}
 	
 	
