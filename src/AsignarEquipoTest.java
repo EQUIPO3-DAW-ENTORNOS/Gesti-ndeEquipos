@@ -113,7 +113,7 @@ class AsignarEquipoTest {
 		//rellenamos campos
 		String nombreJugador="Pedri";
 		jugador.setNombreJugador(nombreJugador);
-		int edadjugador =0;
+		int edadjugador =-1;
 		jugador.setEdad(edadjugador);
 		String idioma ="Español";
 		jugador.setIdioma(idioma);
@@ -236,7 +236,7 @@ class AsignarEquipoTest {
 		//rellenamos sus campos
 		String nombreEquipo="FCBOLA";
 		equipo.setNombreEquipo(nombreEquipo);
-		int ranking =0;
+		int ranking =-1;
 		equipo.setRanking(ranking);
 		
 		asignarEquipo.setEquipo(equipo);

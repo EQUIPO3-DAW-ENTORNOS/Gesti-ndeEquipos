@@ -8,38 +8,24 @@ public class AsignarEquipo {
       
 
       public void setEquipo(Equipo equipo) {
-  		//code here
-    	  String nombrevalido="FCBARRIO";
-    	  int numeroJugadores=20;
-    	  int ranking=12;
-    	  equipo.setNombreEquipo(nombrevalido);
-    	  equipo.setRanking(numeroJugadores);
-    	  
-    	  assertNotNull(nombrevalido);
-    	  assertNotNull(numeroJugadores);
+    	  if(equipo!=null && equipo.getNombreEquipo()!=null && equipo.getRanking()!=-1) {
+    		  this.equipo = equipo;
+    	  } else {
+    		  this.equipo = null;
     	
+    	  }
+    	 
+    		  
     	  
       }
       
       public void setJugador(Jugador jugador) {
-  		//code here
-    	  AsignarEquipo asignarEquipo = new AsignarEquipo();
-  		/*Creamos un jugador con todos los campos válidos*/
-  		String nombrevalido = "Antonio";
-  		int edadValida = 20;
-  		String idiomaValido = "Español";
-  		jugador.setNombreJugador(nombrevalido);
-  		jugador.setEdad(edadValida);
-  		jugador.setIdioma(idiomaValido);
+    	  if(jugador!=null && jugador.getNombreJugador()!=null && jugador.getIdioma()!=null && jugador.getEdad()!=-1) {
+  		this.jugador = jugador;
+  	}else {
+  	  this.jugador= null;
+  	}
   		
-  		/*Asignar el jugador creado en asignar equipo*/
-  		asignarEquipo.setJugador(jugador);
-  		
-  		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
-  		assertNotNull(jugadorGuardado);
-  		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
-  		assertEquals(edadValida, jugadorGuardado.getEdad());
-  		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
   	}
       
       
