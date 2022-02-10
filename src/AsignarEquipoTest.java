@@ -96,14 +96,7 @@ class AsignarEquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}
-	//@Test
-	void testSetAsignarEquiporankingincorrecto() {
-		Equipo equipo = new Equipo();
-		Integer.parseInt("m");
-		assertThrows(IllegalArgumentException.class, () -> {
-			//equipo.setRanking(rankingEquipo);
-		});	
-	}
+
 	@Test
 	void testSetAsignarEquiporankingVacío() {
 		Equipo equipo = new Equipo();

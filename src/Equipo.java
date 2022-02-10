@@ -29,15 +29,15 @@ public class Equipo {
 
 	
 	public void setRanking(int ranking) {
-	int rankingvacío = -1;
+	int rankingvacio = -1;
 		
 		
 		if(ranking<=10) {
 			this.ranking = ranking;
-		}else if(ranking==rankingvacío) {
-			this.ranking = rankingvacío;
+		}else if(ranking==rankingvacio) {
+			this.ranking = rankingvacio;
 		}else if(ranking<0) {
-			this.ranking = rankingvacío;
+			this.ranking = rankingvacio;
 		}else {
 			this.ranking = ranking;
 		}

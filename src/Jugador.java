@@ -35,21 +35,21 @@ public class Jugador {
 		for(int i=0;i<=nombre.length()-1;i++) { //Nombre con un número.
 		char letra = nombre.charAt(i);
 		if	(!Character.isLetter(letra) && letra !=20);
+		
 	}
+	
 		 
 		
 	}
 	public void setEdad(int edad) {
-	int vacío = -1;	
+	int vacio = -1;	
 	
-		if(edad>18) {				//Jugador mayor de edad.
-			this.edad = edad;
-		}else if(edad==18) {		//Edad igual a 18.
+		if(edad>=18) {				//Jugador mayor de edad.
 			this.edad = edad;
 		}else if(edad<18) {			//Edad menor de 18.
-			this.edad  = vacío;
-		}else if(edad==vacío) {		//Edad vacía.
-			this.edad = vacío;
+			this.edad  = vacio;
+		}else if(edad==-1) {		//Edad vacía.
+			this.edad = vacio;
 		}
  
 		

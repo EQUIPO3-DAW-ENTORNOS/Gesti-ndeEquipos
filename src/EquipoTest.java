@@ -97,8 +97,8 @@ class EquipoTest {
 	}
 	void testSetrankingcampovacio() {
 		Equipo equipo = new Equipo();
-		int rankingvacío=-1;
-		equipo.setRanking(rankingvacío);
+		int rankingvacio=-1;
+		equipo.setRanking(rankingvacio);
 		assertEquals(-1,equipo.getRanking());
 	}
 	

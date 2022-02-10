@@ -5,20 +5,6 @@ import org.junit.jupiter.api.Test;
 class JugadorTest {
 
 	@Test
-	void testSetNombreenMayus() {
-		Jugador jugador = new Jugador();
-		String nombrejugador = "PABLO";
-		jugador.setNombreJugador(nombrejugador);
-		assertEquals(nombrejugador,jugador.getNombreJugador());
-	}
-	@Test
-	void testSetNombreenMinus() {
-		Jugador jugador = new Jugador();
-		String nombrejugador = "pablo";
-		jugador.setNombreJugador(nombrejugador);
-		assertEquals(null,jugador.getNombreJugador());
-	}
-	@Test
 	void testSetNombreJugadornumerodecaracteressuperiora20() {
 		Jugador jugador = new Jugador();
 		String nombrejugador = "pablodddddddddddddddddddddddddddd";
@@ -281,6 +267,24 @@ class JugadorTest {
 		String idioma = "Español";
 		jugador.setIdioma(idioma);
 		assertEquals(null,jugador.tipoJugador());
+	}
+	
+	
+	
+//Story 7 min y mays
+	@Test
+	void testSetNombreenMayus() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "PABLO";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(nombrejugador,jugador.getNombreJugador());
+	}
+	@Test
+	void testSetNombreenMinus() {
+		Jugador jugador = new Jugador();
+		String nombrejugador = "pablo";
+		jugador.setNombreJugador(nombrejugador);
+		assertEquals(null,jugador.getNombreJugador());
 	}
 	
 	
