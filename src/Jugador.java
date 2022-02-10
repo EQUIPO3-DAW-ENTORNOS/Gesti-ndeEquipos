@@ -14,14 +14,20 @@ public class Jugador {
 		}
 
 	public void setNombreJugador(String nombre) {
-		if(nombre.equals(nombre.toUpperCase())){
-			this.nombre=nombre;
-		}else if(nombre.equals(nombre.toLowerCase())) {
-			this.nombre=null;
+
+		
+		boolean tieneNumeros = nombre.matches("[0-9].+");
+		
+		if(!tieneNumeros) {
+			this.nombre = nombre;
+		}else {
+			this.nombre = null;
 		}
 		
-		
-		if(nombre.length()<=20) {				//Nombre menor igual a 20.
+		nombre=nombre.toUpperCase();
+		if(nombre==nombre.toUpperCase()) {
+			this.nombre=nombre;
+		}else if(nombre.length()<=20) {				//Nombre menor igual a 20.
 			this.nombre = nombre;
 		}else if(nombre.length()>20) {			//Nombre mayor que 20.			   
 			this.nombre = null;
@@ -38,12 +44,9 @@ public class Jugador {
 		}
 		if(nombre.equals("")) {					//Nombre vacío.       
 			this.nombre = null;
-		}                          
-		for(int i=0;i<=nombre.length()-1;i++) { //Nombre con un número.
-		char letra = nombre.charAt(i);
-		if	(!Character.isLetter(letra) && letra !=20);
+		}
 		
-	}
+
 	
 		 
 		

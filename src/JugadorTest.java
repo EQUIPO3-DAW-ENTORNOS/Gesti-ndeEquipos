@@ -7,7 +7,7 @@ class JugadorTest {
 	@Test
 	void testSetNombreJugadornumerodecaracteressuperiora20() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "pablodddddddddddddddddddddddddddd";
+		String nombrejugador = "PABLODDDDDDDDDDDDDDDDDDDDDDDDD";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(nombrejugador,jugador.getNombreJugador());
 	}
@@ -21,7 +21,7 @@ class JugadorTest {
 	@Test
 	void testSetNombreJugadorcon20caracteres() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "pedropablopedropablopedropablo";
+		String nombrejugador = "PEDROPABLOPEDROPABLOPEDROPABLO";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(nombrejugador, jugador.getNombreJugador());
 	}
@@ -42,21 +42,21 @@ class JugadorTest {
 	@Test
 	void testSetNombreJugadorconmenosde4caracteres() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "ana";
+		String nombrejugador = "ANA";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
 	@Test
 	void testSetNombreJugadorconde4caracteres() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "iker";
+		String nombrejugador = "IKER";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(nombrejugador,jugador.getNombreJugador());
 	}
 	@Test
 	void testSetNombreJugadorconmásde4caracteres() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "aitor";
+		String nombrejugador = "AITOR";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(nombrejugador,jugador.getNombreJugador());
 	}
@@ -271,7 +271,7 @@ class JugadorTest {
 	
 	
 	
-//Story 7 min y mays
+//Story 7 mays
 	@Test
 	void testSetNombreenMayus() {
 		Jugador jugador = new Jugador();
@@ -279,13 +279,7 @@ class JugadorTest {
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(nombrejugador,jugador.getNombreJugador());
 	}
-	@Test
-	void testSetNombreenMinus() {
-		Jugador jugador = new Jugador();
-		String nombrejugador = "pablo";
-		jugador.setNombreJugador(nombrejugador);
-		assertEquals(null,jugador.getNombreJugador());
-	}
+
 	
 	
 }
