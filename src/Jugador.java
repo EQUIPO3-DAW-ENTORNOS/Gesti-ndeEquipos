@@ -14,6 +14,13 @@ public class Jugador {
 		}
 
 	public void setNombreJugador(String nombre) {
+		if(nombre.equals(nombre.toUpperCase())){
+			this.nombre=nombre;
+		}else if(nombre.equals(nombre.toLowerCase())) {
+			this.nombre=null;
+		}
+		
+		
 		if(nombre.length()<=20) {				//Nombre menor igual a 20.
 			this.nombre = nombre;
 		}else if(nombre.length()>20) {			//Nombre mayor que 20.			   
@@ -102,5 +109,7 @@ public class Jugador {
 	}
 	
 }
+	
+		
+	}
 
-}
