@@ -112,7 +112,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking = 8;
 		equipo.setRanking(ranking);
-		assertEquals("Primera",equipo.categoriaequipo());
+		assertEquals("Primera",equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetcategoriaEquiporanking7a10con7() {
@@ -121,7 +121,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking = 7;
 		equipo.setRanking(ranking);
-		assertEquals("Primera",equipo.categoriaequipo());
+		assertEquals("Primera",equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetcategoriaEquiporanking7a10con10() {
@@ -130,7 +130,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking = 10;
 		equipo.setRanking(ranking);
-		assertEquals("Primera",equipo.categoriaequipo());
+		assertEquals("Primera",equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetcategoriaEquiporanking7a10conNombrevacío() {
@@ -139,7 +139,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking = 8;
 		equipo.setRanking(ranking);
-		assertEquals(null,equipo.categoriaequipo());
+		assertEquals(null,equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetcategoriaEquiporanking3a6() {
@@ -148,7 +148,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking = 4;
 		equipo.setRanking(ranking);
-		assertEquals("Segunda",equipo.categoriaequipo());
+		assertEquals("Segunda",equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetcategoriaEquiporanking3a6con3() {
@@ -157,7 +157,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking = 3;
 		equipo.setRanking(ranking);
-		assertEquals("Segunda",equipo.categoriaequipo());
+		assertEquals("Segunda",equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetcategoriaEquiporanking3a6con6() {
@@ -166,7 +166,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking = 6;
 		equipo.setRanking(ranking);
-		assertEquals("Segunda",equipo.categoriaequipo());
+		assertEquals("Segunda",equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetcategoriaEquiporanking3a6concampovacío() {
@@ -175,7 +175,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking =4 ;
 		equipo.setRanking(ranking);
-		assertEquals(null,equipo.categoriaequipo());
+		assertEquals(null,equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetcategoriaEquiporankingmenor3() {
@@ -184,7 +184,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking =2 ;
 		equipo.setRanking(ranking);
-		assertEquals("Tercera",equipo.categoriaequipo());
+		assertEquals("Tercera",equipo.categoriaEquipo());
 	}
 	@Test
 	void testSetcategoriaEquiporankingmenor3campovacío() {
@@ -193,7 +193,7 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		int ranking =2 ;
 		equipo.setRanking(ranking);
-		assertEquals(null,equipo.categoriaequipo());
+		assertEquals(null,equipo.categoriaEquipo());
 	}
 
 
