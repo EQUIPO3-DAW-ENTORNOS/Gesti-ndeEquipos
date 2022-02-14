@@ -11,48 +11,45 @@ public class Equipo {
 	
 	public void setNombreEquipo(String nombreEquipo) {
 		
-		final int CARACTERES_NOMBRE_EQUIPO1 = 20;
-		final int CARACTERES_NOMBRE_EQUIPO2 = 4;
-		final int CARACTERES_NOMBRE_EQUIPO3 = 3;
+		final int CARACTERES_MAXIMO_20 = 20;
+		final int CARACTERES_MINIMO_A_4 = 4;
+		final int CARACTERES_MENORES_AL_MINIM0 = 3;
+		final String CARACTERES_VACIO = " ";
+		final String PALABRAS_QUE_INCLUYA_NÚMERO="Fcbarrio90";
 		
 		
-		if(nombreEquipo.equals(" ")) {
+		if(nombreEquipo.equals(CARACTERES_VACIO) ||
+		   nombreEquipo.length() >= CARACTERES_MAXIMO_20 ||
+		   nombreEquipo.length() > CARACTERES_MENORES_AL_MINIM0 ||
+		   nombreEquipo.equals(PALABRAS_QUE_INCLUYA_NÚMERO)) {
+			
 			this.nombreEquipo=null;
 		}
 		
-		if(nombreEquipo.length() >= CARACTERES_NOMBRE_EQUIPO1) {
-			this.nombreEquipo = null;
-		}
 		
-		if(nombreEquipo.length() >= CARACTERES_NOMBRE_EQUIPO2) {
+		if(nombreEquipo.length() >= CARACTERES_MINIMO_A_4 ) {
 			this.nombreEquipo = nombreEquipo;
 		}
 		
-		if(nombreEquipo.length() > 20) {
-			this.nombreEquipo = null;
-		}
 		
-		if(nombreEquipo.equals("Fcbarrio90")) {
-			this.nombreEquipo = null;
-		}
 	}
 
 	
 	public void setRanking(int ranking) {
 		
 	int rankingVacio = -1;	
-	final int CARACTERES_NOMBRE_EQUIPO3=0;
+	final int RANKING_VACIO=0;
+	final int RANKING_MENOR_O_IGUAL_MAXIMO=10;
 	
-		if(ranking <= 10) {
+		if(ranking <= RANKING_MENOR_O_IGUAL_MAXIMO) {
 			this.ranking = ranking;
 		}
 		
-		else if(ranking == rankingVacio) {
+		else if(ranking == rankingVacio ||
+				ranking < RANKING_VACIO) {
 			this.ranking = rankingVacio;
 		}
-		else if(ranking < CARACTERES_NOMBRE_EQUIPO3) {
-			this.ranking = rankingVacio;
-		}
+		
 		else {
 			this.ranking = ranking;
 		}
@@ -67,22 +64,26 @@ public class Equipo {
 	}
 	public String categoriaEquipo(){
 		
-		final int CARACTERES_NOMBRE_EQUIPO4 = -1;
-		final int CARACTERES_NOMBRE_EQUIPO5 = 3;
-		final int CARACTERES_NOMBRE_EQUIPO6 = 6;
-		final int CARACTERES_NOMBRE_EQUIPO7 = 10;
+		final int CARACTERES_NOMBRE_NULO = -1;
+		final int CARACTERES_MENORES_A_3 = 3;
+		final int CARACTERES_ENTRE_TRES_Y_SEIS = 6;
+		final int CARACTERES_ENTRE_SIETE_Y_DIEZ = 10;
 		
-		if(nombreEquipo == null) {
+		if(nombreEquipo == null ||
+		   ranking == CARACTERES_NOMBRE_NULO 	) {
 			return null;
-		}else if(ranking == CARACTERES_NOMBRE_EQUIPO4) {
-			return null;
-		}else if(ranking < CARACTERES_NOMBRE_EQUIPO5) {
+		}
+		
+		else if(ranking < CARACTERES_MENORES_A_3 ) {
 			return "Tercera";
-		}else if(ranking >=3 && ranking <= CARACTERES_NOMBRE_EQUIPO6) {
+		}
+		else if(ranking >=3 && ranking <=  CARACTERES_ENTRE_TRES_Y_SEIS ) {
 			return "Segunda";
-		}else if(ranking >=7 && ranking <= CARACTERES_NOMBRE_EQUIPO7) {
+		}
+		else if(ranking >=7 && ranking <= CARACTERES_ENTRE_SIETE_Y_DIEZ) {
 			return "Primera";
-		}else {
+		}
+		else {
 			return null;
 		}
 		
