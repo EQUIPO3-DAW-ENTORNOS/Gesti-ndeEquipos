@@ -3,76 +3,116 @@ public class Jugador {
 	private String nombre;
 	private int edad;
 	private String idioma;
+	private String tipojugador;
 	
+	
+
+
+
 	public Jugador () {
 			
 		}
 
 	public void setNombreJugador(String nombre) {
-		//Nombre de más de 20 caracteres.
-		if(nombre=="antonioantonioantonioantonioantonioantonioantonio") {
+
+		
+		boolean tieneNumeros = nombre.matches("[0-9].+");
+		
+		if(!tieneNumeros) {
+			this.nombre = nombre;
+		}else {
 			this.nombre = null;
 		}
-		//Nombre con 20 caracteres.
-		if(nombre=="pedropablopedropablopedropablo") {
+		
+		nombre=nombre.toUpperCase();
+		if(nombre==nombre.toUpperCase()) {
+			this.nombre=nombre;
+		}else if(nombre.length()<=20) {				//Nombre menor igual a 20.
+			this.nombre = nombre;
+		}else if(nombre.length()>20) {			//Nombre mayor que 20.			   
+			this.nombre = null;
+		}
+		
+		if(nombre.length()<4) {					//Menor que 4.    
+			this.nombre = null;
+		}else if(nombre.length()>=4) {			//Nombre mayor igual a 4.    
 			this.nombre = nombre;
 		}
-		//Nombre campo vacío.
-		if(nombre==" ") {
-			this.nombre = null;
-		}
-		//Nombre recibe un numero.
-		if(nombre=="1234") {
-			this.nombre = null;
-		}
-	}
-			
 		
+		if(nombre=="@") {						//Nombre caracteres especiales.            
+			this.nombre = null;
+		}
+		if(nombre.equals("")) {					//Nombre vacío.       
+			this.nombre = null;
+		}
+		
+
 	
+		 
+		
+	}
 	public void setEdad(int edad) {
-		//Jugador menor de 18 años.
-		if(edad<18) {
-			this.edad  = (Integer) null;
-		}
-		//Jugador edad campo vacío.-mirar como se pone vacío en un int
-		if(edad==" ") {
-			this.edad = (Integer) null;
-		}
-		//Jugador edad = 18.-mirar si esta bien esto
-		if(edad==18) {
+	int vacio = -1;	
+	
+		if(edad>=18) {				//Jugador mayor de edad.
 			this.edad = edad;
+		}else if(edad<18) {			//Edad menor de 18.
+			this.edad  = vacio;
+		}else if(edad==-1) {		//Edad vacía.
+			this.edad = vacio;
 		}
+ 
+		
 	}
-	public void setIdioma(String idioma) {
-		//Idioma erroneo.-mirar como añadir más posibilidades.
-		if(idioma=="Chino") {
-			this.idioma = null;
-		}
-		//Idioma campo vacío.
-		if(idioma==" ") {
-			this.idioma = null;
-		}
-		//Idioma elegido es correcto.-Mirar como poner más de uno y sí de esta manera es correcto.
-		if(idioma=="Español") {
+	public void setIdioma(String idioma) {	
+		//Idiomas correcto e incorrecto.
+		if(idioma.equals("Español")) {
 			this.idioma = idioma;
-		}
-//		if(idioma=="Inglés") {
-//			this.idioma = idioma;
-//		}
-		if(idioma=="Inglés Español") {
+		}else if(idioma.equals("Inglés")) {
+			this.idioma = idioma;
+		}else if(idioma.equals("Aleman")) {
+			this.idioma = idioma;
+		}else if(idioma.equals("Francés")) {
+			this.idioma = idioma;
+		}else if(idioma.equals("")) {     				//Idioma vacío.
+			this.idioma = null;
+		}else if(idioma.equals("Español Inglés")) {    //Elegir dos idiomas.
 			this.idioma = null;
 		}
 	}
-	//hola
+	
+	
 
 	public String getIdioma() {
 		return idioma;
 	}
-	
 	public String getNombreJugador() {
 		return nombre;
 	}
 	public int getEdad() {
 		return edad;
 	}
+	public String tipoJugador() {
+		if(nombre==null) {
+			return null;
+		}else if(idioma==null) {
+			return null;
+		}else if(edad==-1) {
+			return null;
+		}else if(edad<18) {
+			return null;
+		}else if(edad>=18&&edad<25){
+			return "Junior";
+		}else if(edad>=25&&edad<35){
+			return "Senior";
+		}else if(edad>=35){
+			return "Master";
+		}else {
+		return null;
+	}
+	
 }
+	
+		
+	}
+

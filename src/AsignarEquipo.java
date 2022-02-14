@@ -1,22 +1,33 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 public class AsignarEquipo {
       private Equipo equipo;
       private Jugador jugador;
       
-//      
-//      public AsignarEquipo() {
-//    	  
-////    	 if(rankingEquipo==(integer)null){}
-////  		 this.rankingEquipo=(integer)null;
-////      }
-////      
+
       public void setEquipo(Equipo equipo) {
-  		//code here
+    	  if(equipo!=null && equipo.getNombreEquipo()!=null && equipo.getRanking()!=-1) {
+    		  this.equipo = equipo;
+    	  } else {
+    		  this.equipo = null;
+    	
+    	  }
+    	 
+    		  
+    	  
       }
       
       public void setJugador(Jugador jugador) {
-  		//code here
-      }
+    	  if(jugador!=null && jugador.getNombreJugador()!=null && jugador.getIdioma()!=null && jugador.getEdad()!=-1) {
+  		this.jugador = jugador;
+  	}else {
+  	  this.jugador= null;
+  	}
+  		
+  	}
+      
       
       public Equipo getEquipo(){
           return equipo;
