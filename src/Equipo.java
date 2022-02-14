@@ -38,7 +38,7 @@ public class Equipo {
 	public void setRanking(int ranking) {
 		
 	int rankingVacio = -1;	
-	final int RANKING_VACIO=0;
+	int RANKING_VACIO=0;
 	final int RANKING_MENOR_O_IGUAL_MAXIMO=10;
 	
 		if(ranking <= RANKING_MENOR_O_IGUAL_MAXIMO) {
@@ -64,7 +64,7 @@ public class Equipo {
 	}
 	public String categoriaEquipo(){
 		
-		final int CARACTERES_NOMBRE_NULO = -1;
+		 int CARACTERES_NOMBRE_NULO = -1;
 		final int CARACTERES_MENORES_A_3 = 3;
 		final int CARACTERES_ENTRE_TRES_Y_SEIS = 6;
 		final int CARACTERES_ENTRE_SIETE_Y_DIEZ = 10;
