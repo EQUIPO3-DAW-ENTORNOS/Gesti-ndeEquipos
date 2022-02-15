@@ -9,7 +9,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombrejugador = "PABLODDDDDDDDDDDDDDDDDDDDDDDDD";
 		jugador.setNombreJugador(nombrejugador);
-		assertEquals(nombrejugador,jugador.getNombreJugador());
+		assertEquals(null,jugador.getNombreJugador());
 	}
 	@Test
 	void testSetNombreJugadorconcaracteresnumericos() {
@@ -23,7 +23,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombrejugador = "PEDROPABLOPEDROPABLOPEDROPABLO";
 		jugador.setNombreJugador(nombrejugador);
-		assertEquals(nombrejugador, jugador.getNombreJugador());
+		assertEquals(null, jugador.getNombreJugador());
 	}
 	@Test
 	void testSetNombreJugadorvacio() {
@@ -275,7 +275,7 @@ class JugadorTest {
 	@Test
 	void testSetNombreenMayus() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "pablo";
+		String nombrejugador = "PABLO";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(nombrejugador,jugador.getNombreJugador());
 	}
