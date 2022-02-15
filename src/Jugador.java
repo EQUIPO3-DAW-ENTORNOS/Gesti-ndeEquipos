@@ -61,6 +61,7 @@ public class Jugador {
 
 		}else if(edad == -1) {			//Edad vacía.
 			this.edad = VACIO;
+		
 		}else {
 			this.edad=VACIO;
 		}
