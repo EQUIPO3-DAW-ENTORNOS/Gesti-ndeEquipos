@@ -16,7 +16,7 @@ public class Equipo {
 		final int CARACTERES_MENORES_AL_MINIM0 = 3;
 		final String CARACTERES_VACIO = " ";
 		final String PALABRAS_QUE_INCLUYA_NÚMERO="Fcbarrio90";
-		
+		nombreEquipo=nombreEquipo.toUpperCase();
 		
 		if(nombreEquipo.equals(CARACTERES_VACIO) ||
 		   nombreEquipo.length() >= CARACTERES_MAXIMO_20 ||

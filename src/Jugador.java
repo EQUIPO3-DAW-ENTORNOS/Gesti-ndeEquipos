@@ -4,27 +4,29 @@ public class Jugador {
 	private int edad;
 	private String idioma;
 	private String tipojugador;
-	
-	
 
 
 
 	public Jugador () {
-			
-		}
+
+	}
+	
+	
 
 	public void setNombreJugador(String nombre) {
+		//tener en cuenta que tiene que ir en mayusculas
 
-		
 		boolean tieneNumeros = nombre.matches("[0-9].+");
 		
+		
+
 		if(!tieneNumeros) {
-			this.nombre = nombre;
+			this.nombre = nombre.toUpperCase();
 		}else {
 			this.nombre = null;
 		}
-		
-		nombre=nombre.toUpperCase();
+
+
 		if(nombre==nombre.toUpperCase()) {
 			this.nombre=nombre;
 		}else if(nombre.length()<=20) {				//Nombre menor igual a 20.
@@ -32,38 +34,38 @@ public class Jugador {
 		}else if(nombre.length()>20) {			//Nombre mayor que 20.			   
 			this.nombre = null;
 		}
-		
+
 		if(nombre.length()<4) {					//Menor que 4.    
 			this.nombre = null;
 		}else if(nombre.length()>=4) {			//Nombre mayor igual a 4.    
 			this.nombre = nombre;
 		}
-		
+
 		if(nombre=="@") {						//Nombre caracteres especiales.            
 			this.nombre = null;
 		}
 		if(nombre.equals("")) {					//Nombre vacío.       
 			this.nombre = null;
 		}
-		
-
-	
-		 
-		
 	}
-	public void setEdad(int edad) {
-	int vacio = -1;	
 	
+	
+	
+	
+	
+	public void setEdad(int edad) {
+		final int VACIO = -1;	
+
 		if(edad>=18) {				//Jugador mayor de edad.
 			this.edad = edad;
 		}else if(edad<18) {			//Edad menor de 18.
-			this.edad  = vacio;
+			this.edad  = VACIO;
 		}else if(edad==-1) {		//Edad vacía.
-			this.edad = vacio;
+			this.edad = VACIO;
 		}
- 
-		
 	}
+	
+	
 	public void setIdioma(String idioma) {	
 		//Idiomas correcto e incorrecto.
 		if(idioma.equals("Español")) {
@@ -80,8 +82,8 @@ public class Jugador {
 			this.idioma = null;
 		}
 	}
-	
-	
+
+
 
 	public String getIdioma() {
 		return idioma;
@@ -108,11 +110,11 @@ public class Jugador {
 		}else if(edad>=35){
 			return "Master";
 		}else {
-		return null;
+			return null;
+		}
+
 	}
-	
+
+
 }
-	
-		
-	}
 

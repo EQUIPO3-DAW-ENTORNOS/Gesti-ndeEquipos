@@ -275,7 +275,7 @@ class JugadorTest {
 	@Test
 	void testSetNombreenMayus() {
 		Jugador jugador = new Jugador();
-		String nombrejugador = "PABLO";
+		String nombrejugador = "pablo";
 		jugador.setNombreJugador(nombrejugador);
 		assertEquals(nombrejugador,jugador.getNombreJugador());
 	}
