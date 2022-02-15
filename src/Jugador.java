@@ -35,28 +35,26 @@ public class Jugador {
 
 
 	public void setEdad(int edad) {
-		final int VACIO = -1;
- 
-		if ( edad >= 18) {				//Jugador mayor de edad.
+		final int edadmaxima = 18;
+		final int vacio = -1;
+		
+		if ( edad >= edadmaxima) {				//Jugador mayor de edad.
 			this.edad = edad;
-
-		} else if ( edad == -1) {		//Edad vacía.
-			this.edad = VACIO;
 		} else {
-			this.edad = VACIO;
+			this.edad = vacio;
 		}
 	}
 
 
 	public void setIdioma(String idioma) {	
-		final String IDIOMA_VALIDO[]=	
+		final String[] idiomavalido=	
 			{ 
 					"Inglés","Español","Aleman","Francés"		
 			};
-		if (idioma.equals( IDIOMA_VALIDO[0] ) 
-				|| idioma.equals( IDIOMA_VALIDO[1] ) 
-				|| idioma.equals( IDIOMA_VALIDO[2] )
-				|| idioma.equals( IDIOMA_VALIDO[3] )) {
+		if (idioma.equals( idiomavalido[0] ) 
+				|| idioma.equals( idiomavalido[1] ) 
+				|| idioma.equals( idiomavalido[2] )
+				|| idioma.equals( idiomavalido[3] )) {
 			this.idioma=idioma;
 		} else {
 			this.idioma=null;
@@ -77,9 +75,9 @@ public class Jugador {
 		return edad;
 	}
 	public String tipoJugador() {
-		final int VACIO = -1;
+		final int vacio = -1;
 
-		if ( nombre == null || idioma == null || edad == VACIO || edad < 18 ) {
+		if ( nombre == null || idioma == null || edad == vacio || edad < 18 ) {
 			return null;
 		} else if ( edad >= 18 && edad < 25 ){
 			return "Junior";
