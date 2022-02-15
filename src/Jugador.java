@@ -23,7 +23,7 @@ public class Jugador {
 
 		boolean tieneNumeros = nombre.matches("[0-9].+");
 
-		if (!tieneNumeros && nombre.length() <=20 && nombre.length() >= 4){
+		if (!tieneNumeros && nombre.length() <=20 &&nombre.length() >= 4){
 			this.nombre = nombre.toUpperCase();
 		} else if (nombre == "@" || nombre.equals("")) {
 			this.nombre = null;
