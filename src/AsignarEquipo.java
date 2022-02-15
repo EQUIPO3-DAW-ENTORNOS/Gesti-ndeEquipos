@@ -1,5 +1,13 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+//ficheros no porque no hay ficheros.
+//declaracion de variables(codigo ordenado)
+//Nombres de identificadores(comprobado)
+//Estructura de codiga es correcta
+//magic numbers HECHO
+//Bad Smells hecho
+
+
 import org.junit.jupiter.api.Test;
 
 public class AsignarEquipo {
@@ -8,19 +16,24 @@ public class AsignarEquipo {
       
 
       public void setEquipo(Equipo equipo) {
-    	  if(equipo!=null && equipo.getNombreEquipo()!=null && equipo.getRanking()!=-1) {
+      final  int RANKINGVACIO=-1; 
+    	  if(equipo!=null &&
+    	   equipo.getNombreEquipo()!=null &&
+    	   equipo.getRanking()!=RANKINGVACIO) {
     		  this.equipo = equipo;
     	  } else {
     		  this.equipo = null;
     	
     	  }
-    	 
-    		  
-    	  
+    	 	  
       }
       
       public void setJugador(Jugador jugador) {
-    	  if(jugador!=null && jugador.getNombreJugador()!=null && jugador.getIdioma()!=null && jugador.getEdad()!=-1) {
+    	  final int EDADVACIA=-1;
+    	  if(jugador!=null && 
+    	 jugador.getNombreJugador()!=null &&
+    	 jugador.getIdioma()!=null &&
+    	 jugador.getEdad()!=EDADVACIA) {
   		this.jugador = jugador;
   	}else {
   	  this.jugador= null;
