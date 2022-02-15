@@ -20,9 +20,11 @@ public class Jugador {
 		
 		if (!tieneNumeros && nombre.length() <=20 && nombre.length() >= 4){
 			this.nombre = nombre.toUpperCase();
-		}else if (nombre == "@" || nombre.equals("")) {
+		}
+		else if (nombre == "@" || nombre.equals("")) {
 			this.nombre = null;
-		}else {
+		}
+		else {
 			this.nombre = null;
 		}
 
