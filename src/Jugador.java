@@ -56,10 +56,10 @@ public class Jugador {
 	public void setEdad(int edad) {
 		final int VACIO = -1;	
 
-		if ( edad >= 18) {				//Jugador mayor de edad.
+		if( edad >= 18) {				//Jugador mayor de edad.
 			this.edad = edad;
 
-		}else if (edad == -1) {			//Edad vacía.
+		}else if(edad == -1) {			//Edad vacía.
 			this.edad = VACIO;
 		}else {
 			this.edad=VACIO;
