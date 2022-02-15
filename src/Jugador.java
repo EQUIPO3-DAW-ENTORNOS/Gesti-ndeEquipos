@@ -18,35 +18,16 @@ public class Jugador {
 
 		boolean tieneNumeros = nombre.matches("[0-9].+");
 		
-		
-
-		if(!tieneNumeros) {
+		if (!tieneNumeros && nombre.length() <=20 && nombre.length() >= 4){
 			this.nombre = nombre.toUpperCase();
+		}else if (nombre == "@" || nombre.equals("")) {
+			this.nombre = null;
 		}else {
 			this.nombre = null;
 		}
 
 
-		if(nombre==nombre.toUpperCase()) {
-			this.nombre=nombre;
-		}else if(nombre.length()<=20) {				//Nombre menor igual a 20.
-			this.nombre = nombre;
-		}else if(nombre.length()>20) {			//Nombre mayor que 20.			   
-			this.nombre = null;
-		}
-
-		if(nombre.length()<4) {					//Menor que 4.    
-			this.nombre = null;
-		}else if(nombre.length()>=4) {			//Nombre mayor igual a 4.    
-			this.nombre = nombre;
-		}
-
-		if(nombre=="@") {						//Nombre caracteres especiales.            
-			this.nombre = null;
-		}
-		if(nombre.equals("")) {					//Nombre vacío.       
-			this.nombre = null;
-		}
+		
 	}
 	
 	
