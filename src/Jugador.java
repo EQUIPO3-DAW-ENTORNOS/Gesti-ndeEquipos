@@ -52,7 +52,8 @@ public class Jugador {
 	
 	
 	public void setIdioma(String idioma) {	
-		
+		//Idiomas correcto e incorrecto.
+		final String IDIOMA_VALIDO[]=	{ "Inglés" "Español"}
 		if(idioma.equals("Español")) {
 			this.idioma = idioma;
 		}else if(idioma.equals("Inglés")) {
