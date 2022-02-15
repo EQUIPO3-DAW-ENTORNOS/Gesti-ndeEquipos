@@ -10,25 +10,24 @@ public class Equipo {
 	
 	
 	public void setNombreEquipo(String nombreEquipo) {
+		final int caracteresmaximo20 = 20;
+		final int caracteresminimoa4 = 4;
+		final int caracteresmenoresalminimo = 3;
+		final String caracteresvacios = " ";
+		final String palabrasqueincluyanumero="Fcbarrio90";
 		
-		final int CARACTERES_MAXIMO_20 = 20;
-		final int CARACTERES_MINIMO_A_4 = 4;
-		final int CARACTERES_MENORES_AL_MINIM0 = 3;
-		final String CARACTERES_VACIO = " ";
-		final String PALABRAS_QUE_INCLUYA_NÚMERO="Fcbarrio90";
-		nombreEquipo=nombreEquipo.toUpperCase();
 		
-		if(nombreEquipo.equals(CARACTERES_VACIO) ||
-		   nombreEquipo.length() >= CARACTERES_MAXIMO_20 ||
-		   nombreEquipo.length() > CARACTERES_MENORES_AL_MINIM0 ||
-		   nombreEquipo.equals(PALABRAS_QUE_INCLUYA_NÚMERO)) {
+		if(nombreEquipo.equals(caracteresvacios) ||
+		   nombreEquipo.length() >= caracteresmaximo20 ||
+		   nombreEquipo.length() > caracteresmenoresalminimo ||
+		   nombreEquipo.equals(palabrasqueincluyanumero)) {
 			
 			this.nombreEquipo=null;
 		}
 		
 		
-		if(nombreEquipo.length() >= CARACTERES_MINIMO_A_4 ) {
-			this.nombreEquipo = nombreEquipo;
+		if(nombreEquipo.length() >= caracteresminimoa4 ) {
+			this.nombreEquipo = nombreEquipo.toUpperCase();
 		}
 		
 		
