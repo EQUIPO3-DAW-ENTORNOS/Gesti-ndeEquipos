@@ -14,7 +14,12 @@ public class Jugador {
 
 
 	public void setNombreJugador(String nombre) {
-		//tener en cuenta que tiene que ir en mayusculas
+		
+		/**
+
+		 *Comprobar si el nombre es correcto
+
+		 */
 
 		boolean tieneNumeros = nombre.matches("[0-9].+");
 
@@ -31,14 +36,19 @@ public class Jugador {
 	}
 
 
-
+	
 
 
 	public void setEdad(int edad) {
+		/**
+
+		 *Comprobar si la edad es correcta
+
+		 */
 		final int edadmaxima = 18;
 		final int vacio = -1;
 		
-		if ( edad >= edadmaxima) {				//Jugador mayor de edad.
+		if ( edad >= edadmaxima) {				
 			this.edad = edad;
 		} else {
 			this.edad = vacio;
@@ -47,6 +57,11 @@ public class Jugador {
 
 
 	public void setIdioma(String idioma) {	
+		/**
+
+		 *Comprobar si los idiomas son correctos
+
+		 */
 		final String[] idiomavalido=	
 			{ 
 					"Inglés","Español","Aleman","Francés"		
@@ -75,6 +90,10 @@ public class Jugador {
 		return edad;
 	}
 	public String tipoJugador() {
+		/**
+
+		 *Definir la clase si todo es correcto
+		 */
 		final int vacio = -1;
 
 		if ( nombre == null || idioma == null || edad == vacio || edad < 18 ) {
